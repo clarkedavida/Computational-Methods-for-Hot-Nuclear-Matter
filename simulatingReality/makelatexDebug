@@ -1,0 +1,15 @@
+#!/bin/bash
+rm *.aux
+pdflatex 0_simulat.tex
+for auxfile in ch_*.aux; do
+    bibtex `basename $auxfile .aux`
+done
+for auxfile in ap_*.aux; do
+    bibtex `basename $auxfile .aux`
+done
+
+pdflatex 0_simulat.tex
+makeindex 0_simulat
+pdflatex 0_simulat.tex
+pdflatex 0_simulat.tex
+./distclean

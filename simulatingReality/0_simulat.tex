@@ -1,0 +1,309 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 0_simulat.tex                                                               %
+% by: David A. Clarke                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Normal preamble stuff.
+\documentclass[12pt]{book}
+\usepackage[title]{appendix}
+\usepackage{mathtools,tensor,physics,slashed,textcomp,mhchem}
+\usepackage{microtype} % should help with hyphenation
+\usepackage{bbm} % 4-vectors
+
+% This section is for making C++ code.
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\lstset{
+  backgroundcolor=\color{gray!10},
+  basicstyle=\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  columns=fullflexible,
+  commentstyle=\color{OliveGreen},
+  extendedchars=true,
+  frame=single,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=c++,
+  numbers=none,
+  numbersep=5pt,
+  numberstyle=\time\color{blue},
+  rulecolor=\color{Gray},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=5,
+  stringstyle=\color{Orchid},
+  tabsize=4,
+  title=\lstname
+}
+
+
+% davitex and required packages
+\usepackage{amsmath,amssymb,graphicx,multirow,tabularx}
+\usepackage{davitex}
+
+\newcommand{\fvec}[1]{\mathbbm{#1}}
+\newcommand{\units}[1]{\,[\text{#1}]}
+
+
+% If you click on citations or equation references, you will be take
+% to the corresponding page. 
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=magenta,
+  urlcolor=blue,
+}
+
+
+% Put references at the end of each chapter, directly after the
+% end of the chapter, call them "References" instead of
+% "Bibliography", and use numbers with square brackets.
+\usepackage{url,natbib,chapterbib}
+\let\oldbibliography\bibliography
+\renewcommand{\bibliography}[1]{{%
+  \let\chapter\section%
+  \oldbibliography{#1}}}
+\renewcommand\bibname{References}
+\setcitestyle{numbers,square}
+
+
+% Make index and let it appear in table of contents.
+\usepackage{makeidx}
+\makeindex
+\usepackage[totoc]{idxlayout}
+
+
+% Prevent hyphenation.
+\setlength\parindent{15pt}
+\overfullrule=2cm
+
+
+% Theorems and stuff.
+\usepackage{amsthm}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{theorems}
+\newtcbtheorem[number within=section]{theorem}{Theorem}{%
+  breakable,
+  enhanced,
+  before skip=10pt,
+  colback=green!5,
+  colframe=green!35!black,
+  fonttitle=\bfseries}{thm}
+\newtcbtheorem[number within=section]{proposition}{Proposition}{%
+  breakable,
+  enhanced,
+  before skip=10pt,
+  colback=green!5,
+  colframe=green!35!black,
+  fonttitle=\bfseries}{prp}
+\newtcbtheorem[number within=section]{lemma}{Lemma}{%
+  breakable,
+  enhanced,
+  before skip=10pt,
+  colback=green!5,
+  colframe=green!35!black,
+  fonttitle=\bfseries}{lem}
+\newtcbtheorem[number within=section]{corollary}{Corollary}{%
+  breakable,
+  enhanced,
+  before skip=10pt,
+  colback=green!5,
+  colframe=green!35!black,
+  fonttitle=\bfseries}{cor}
+\newtcbtheorem[number within=section]{example}{Example}{%
+  breakable,
+  enhanced,
+  before skip=10pt,
+  colback=blue!5,
+  colframe=blue!35!black,
+  fonttitle=\bfseries}{cor}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+
+
+% Some environments for some front matter.
+\newenvironment{frontstuff}
+  {\centering\chapter*{}}
+  {\clearpage}
+\newenvironment{listofabbrev}
+  {\chapter*{List of Abbreviations}}
+  {\clearpage}
+
+
+% Feynman rule references
+\definecolor{light}{gray}{.85}
+\newcommand{\F}[1]{\colorbox{light}{{F}{#1}}}
+
+
+% Note that book class by default is formatted to be printed back-to-back.
+\title{\bf Simulating Reality: A First Encounter with
+Lattice Field Theory for First-Year Undergraduates} 
+\author{David Clarke}
+
+
+\begin{document}
+\frontmatter                            % roman page no., suppress chapter
+\maketitle                              % print title page
+
+
+\begin{frontstuff} % ----------------------------------------------- FRONT STUFF
+
+\section*{Symbology}
+\begin{tabular}{ll}
+$\exists$       & There exists \\
+$\forall$       & For all \\
+$\in$           & Is a member of the set \\
+$\leq$          & Less than or equal to; is a subgroup of\\
+$\approx$       & Approximate equality \\
+$\equiv$        & Is defined as \\
+$\propto$       & Is proportional to \\
+
+$a$             & Lattice spacing \\
+$\C$            & Complex numbers \\
+$c$             & Speed of light\\
+$G$             & Newton's gravitational constant\\
+$\hbar$         & Planck's constant \\
+$k_B$           & Boltzmann's constant \\
+$\log$          & Natural logarithm \\
+$\N$            & Natural numbers \\
+$N_c$           & Number of colors \\
+$N_s$           & Lattice extension in a spatial direction \\
+$N_\tau$        & Lattice extension in temperature/Euclidean time direction\\
+$\pr{X}$        & Probability of event $X$ \\
+$\Q$            & Rational numbers \\
+$q$             & Gaussian or Student difference test \\
+$\R$            & Real numbers \\
+$\SU(N)$        & Special unitary group of degree $N$ \\
+$\sigma$        & String tension\\
+$\sigma_i$      & A Pauli matrix\\
+$T_c$           & Deconfining phase transition temperature\\
+$\mathbb{Z}$    & Integers \\
+
+
+\end{tabular}
+\clearpage
+
+
+
+\section*{Abbreviations}
+\begin{tabular}{ll}
+BC      &       Boundary condition \\
+CCW     &       Counterclockwise\\
+CDF     &       Cumulative distribution function \\
+CLT     &       Central limit theorem\\
+CW      &       Clockwise\\
+EM      &       Electromagnetic\\
+FLOP    &       Floating point operation\\
+LFT     &       Lattice field theory\\
+LGT     &       Lattice gauge theory\\
+LQCD    &       Lattice QCD\\
+LHS     &       Left hand side\\
+LLN     &       Law of large numbers\\
+MCMC    &       Markov chain Monte Carlo\\
+OOP     &       Object-oriented programming \\
+PDF     &       Probability distribution function \\
+QCD     &       Quantum chromodynamics \\
+QM      &       Quantum mechanics \\
+RHS     &       Right hand side \\
+RNG     &       Random number generator \\
+SM      &       Standard Model \\
+s.t.    &       Such that \\
+UV      &       Ultraviolet \\
+WLOG    &       Without loss of generality
+\end{tabular}
+\clearpage
+
+
+
+\end{frontstuff} % ----------------------------------------------------- PREFACE
+
+
+\chapter{Acknowledgements}
+These notes were developed in part with helpful feedback from students
+and friends who had a look at what I wrote.
+In particular I would like to thank Grant Curell and my students Kai Ebira
+and Daeton McClure for suggestions to help improve the readability of
+the notes and make the conveyed information more complete.
+Grant especially devoted much time to helping make the discussion about
+matrices and multivariable calculus in Chapter 1 more pedagogical.
+
+
+\chapter{Preface}
+
+Particle physics is the subdiscipline of physics that studies the smallest
+particles in existence. Some of these particles are the building blocks of all known
+matter, and others are physical manifestations of forces; indeed from the
+modern perspective of particle physics, fundamental forces are mediated by
+particles called bosons. This is the most fundamental level of nature we
+experimentally understand, so in that sense, particle physics studies
+the most basic building blocks of reality.
+
+Lattice field theory (LFT) or lattice gauge theory (LGT) is a framework that
+allows us to study particle physics using a computer. There are several
+strategies for doing particle physics calculations on the market. In some cases
+LFT serves as a cross-check of these other approaches. Sometimes, LFT can be
+used to compute physical quantities that can't be computed using other methods.
+
+Lattice calculations generate random snapshots of space-time, then measure a
+physical quantity, such as a particle mass, on those snapshots. We then
+perform statistical analyses on these measurements. Generating the snapshots is 
+highly computationally demanding, utilizing in some cases a significant 
+fraction of the resources of the most powerful supercomputers in the world. 
+Therefore a significant portion of LFT work is focused on high-performance
+computing.
+
+The intention of these notes is to give an introduction to LFT that is
+readable by a first-year undergraduate in physics. To get a full understanding
+of LFT will not be possible for a scientist at this stage in their career, since
+LFT lies at the intersection of many fields of math, physics, and computer
+science, many of which one will not see until graduate school. Still, my hope is
+that the reader can get a heuristic understanding of the field, at least enough
+to be able to write scripts that carry out rudimentary statistical analyses on
+some physical quantities while having some intuition of what it means.
+
+I attempted to make this text relatively self-contained. However there will be
+many parts that I do not explain in detail and must be taken for granted.
+Moreover I assume the reader already has had a course with 
+\begin{itemize}
+  \item calculus (limits, derivatives, and integrals)
+  \item energy and momentum conservation
+  \item forces
+\end{itemize}
+Moreover, it is helpful if the reader already knows just a little bit about programming.
+This text is developed in tandem with a course that gives first-year
+undergraduates some experience in particle physics research, and in that course,
+Python is the language of choice.
+
+The layout is pretty simple: There are some preliminary chapters with
+hopefully enough additional math and physics to give you a foothold in the lattice
+framework. I would recommend not to skip anything in these chapters, even if it
+includes things you already know, just so that you can get used to my notation
+and so that you can gain a little context why these topics are of interest.
+The next chapter is an introduction to the ideas and history of LFT.
+
+One way to gain some familiarity with lattice QCD is to read through these
+notes from start to finish. If you are using these notes in the context
+of an undergraduate research experience, you can also use it just as
+reference material. That is, you can open up a chapter or go to an index
+to try to gain some information about a topic or some jargon that is
+unfamiliar to you.
+
+\tableofcontents                        % print table of contents
+\mainmatter                             % arabic page no., include chapter
+
+
+% These are the chapters of the book.
+\include{ch_math}
+\include{ch_physics}
+\include{ch_LFT}
+
+
+\printindex
+
+
+\end{document}

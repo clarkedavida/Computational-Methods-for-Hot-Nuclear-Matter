@@ -20,7 +20,7 @@ own modest tasks. These tasks include, but are not limited to, the following:
 1. Plan which configurations shall be generated
 2. Generate configurations using [SIMULATeQCD](https://github.com/LatticeQCD/SIMULATeQCD)
 3. Run measurement code from SIMULATeQCD on those configurations
-4. Do statistical analysis using the [AnalysisToolbox](https://github.com/LatticeQCD/AnalysisToolbox)
+4. Do statistical analysis using the [LatticeToolbox](https://github.com/LatticeQCD/AnalysisToolbox)
 5. Construct new code that automatically selects $T_d$
 6. Perform a continuum-limit extrapolation
 7. Collect our results and interpretations in a cogent way
@@ -31,3 +31,21 @@ certain aspects of the theory. We will record which person carried out which tas
 
 In the [projects space](https://github.com/clarkedavida/Computational-Methods-for-Hot-Nuclear-Matter/projects?query=is%3Aopen),
 we will list the tasks that need to be done, claim them, and mark them as they are completed.
+
+## The notes
+
+I went into the course assuming the students had already taken calculus and enough physics to know about kinetic
+and potential energy, forces, and vectors. Lattice QCD requires a lot of technial knowledge that a first-year
+undergrad won't typically be exposed to. These notes are my first attempt to fill that gap.
+
+You can find them in the `simulatingReality` folder. These notes were written in LaTeX. You can look into the `0_simulat.tex` 
+files to see what packages this uses, but I think if you install `texlive-full`, you should have all the packages you need.
+
+Assuming you are using some flavor of Linux or MacOS this compiles with `./makelatex`. If you encounter issues with this, 
+try `./makelatexDebug`. If you have already compiled once with `./makelatex` or `./makelatexDebug`, you can compile 
+with `./makelatexFast`. Feel free to make an [issue](https://github.com/clarkedavida/Computational-Methods-for-Hot-Nuclear-Matter/issues) 
+if you have any problems.
+
+In case you are on Windows, or if you have too much trouble compiling, I also included an already compiled pdf of the
+the notes in `simulatingReality/0_simulat.pdf`. Again, feel free to email me or open up an issue if you find mistakes
+or have suggestions for improvements.

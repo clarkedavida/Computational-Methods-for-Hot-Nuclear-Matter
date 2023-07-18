@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#
+# bibtex stuff
+#
+pdflatex -interaction=batchmode -draftmode 0_simulat.tex
+for auxfile in ch_*.aux; do
+    bibtex `basename $auxfile .aux`
+done
+for auxfile in ap_*.aux; do
+    bibtex `basename $auxfile .aux`
+done
+
+
+pdflatex -interaction=batchmode -draftmode 0_simulat.tex
+makeindex -s indexHeader.ist 0_simulat
+pdflatex -interaction=batchmode -draftmode 0_simulat.tex
+pdflatex -interaction=batchmode 0_simulat.tex
+./distclean
