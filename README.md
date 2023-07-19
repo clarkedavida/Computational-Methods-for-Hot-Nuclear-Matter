@@ -37,6 +37,9 @@ we will list the tasks that need to be done, claim them, and mark them as they a
 I went into the course assuming the students had already taken calculus and enough physics to know about kinetic
 and potential energy, forces, and vectors. Lattice QCD requires a lot of technial knowledge that a first-year
 undergrad won't typically be exposed to. These notes are my first attempt to fill that gap.
+I draw a lot from my [research notes](https://github.com/clarkedavida/researchNotes), but I tried to
+simplify the discussion, and supplement it with some background information that I think
+some of the students will be missing.
 
 You can find them in the `simulatingReality` folder. These notes were written in LaTeX. You can look into the `0_simulat.tex` 
 files to see what packages this uses, but I think if you install `texlive-full`, you should have all the packages you need.
