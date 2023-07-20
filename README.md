@@ -39,7 +39,13 @@ and potential energy, forces, and vectors. Lattice QCD requires a lot of technia
 undergrad won't typically be exposed to. These notes are my first attempt to fill that gap.
 I draw a lot from my [research notes](https://github.com/clarkedavida/researchNotes), but I tried to
 simplify the discussion, and supplement it with some background information that I think
-some of the students will be missing.
+some of the students will be missing. 
+
+**I should mention that these notes are a rough draft, and are
+still being actively developed and edited, so be wary of typos and incomplete information.**
+If you notice something that seems incorrect, or if there is something you find confusing, or
+somewhere that you would like some additional explanation, please
+make an [issue](https://github.com/clarkedavida/Computational-Methods-for-Hot-Nuclear-Matter/issues)!
 
 You can find them in the `simulatingReality` folder. These notes were written in LaTeX. You can look into the `0_simulat.tex` 
 files to see what packages this uses, but I think if you install `texlive-full`, you should have all the packages you need.
