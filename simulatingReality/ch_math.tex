@@ -1229,6 +1229,81 @@ Number of $\sigma$ from $\hat{x}$ & Area under curve & About 1 in ...\\
 \end{table}
 
 
+\section{Bias}\label{sec:bias} 
+
+For this section consider independent random variables $X_1,...,X_N$ 
+drawn from a distribution with mean $\hat{x}$ and variance $\sigma^2$.
+Earlier we recovered the familiar estimator for the mean, which was
+just the ordinary arithmetic average. But what about an estimator for
+the variance? Naively one might write
+\begin{equation}\label{eq:bad}
+  \bar{\sigma}^2_{\text{biased}}=\frac{1}{N}\sum_{i=1}^N(X_i-\bar{X})^2;
+\end{equation} 
+While we expect this estimator to converge\footnote{An estimator that
+converges to the correct result as $N\to\infty$ is 
+{\it consistent}\index{consistent}. Note that unbiased and consistent
+do not mean the same thing; in particular $\bar{\sigma}^2_{\text{biased}}$
+is consistent but biased.} to the
+exact result in the limit $N\to\infty$, it disagrees with
+$\sigma^2$ for small $N$. Most glaringly when $N=1$, the
+estimator is zero, regardless of the exact result. 
+\index{bias}
+An estimator is said to be {\it biased} when its expectation value
+does not agree with the exact result. The difference between the
+expectation value of the estimator and the exact result is
+correspondingly called the {\it bias}. When they agree, we say
+the estimator is {\it unbiased}.
+\begin{proposition}{}{stdev}
+  An unbiased estimator of the variance is
+  $$
+    \bar{\sigma}^2=\frac{1}{N-1}\sum_{i=1}^N(X_i-\bar{X})^2.
+  $$
+  \begin{proof}
+  To construct an unbiased estimator of the variance,
+  we'll determine the bias of the estimator, then remove it. Note
+  \begin{equation*}
+    \ev{\bar{\sigma}^2_{\text{biased}}}=\frac{1}{N}\sum\limits_{i=1}^N
+      \left(\ev{X_i^2}-2\ev{X_i\bar{X}}+\ev{\bar{X}^2}\right).
+  \end{equation*}
+  Let us analyze the above equation term by term. Since the random
+  variables $X_i$ are drawn from the same distribution, the first term
+  is an unbiased estimator of $\ev{X^2}$ for each $i$. Next the
+  second term can be rewritten as
+  \begin{equation*}
+    \begin{aligned}
+    \ev{X_i\bar{X}}&=\frac{1}{N}\left(\ev{X_i^2}+
+                     \sum_{j\,|\,j\neq i}\ev{X_iX_j}\right)\\
+                   &=\frac{1}{N}\left(\ev{X^2}+(N-1)\ev{X}^2\right)\\
+                   &=\frac{1}{N}\left(\ev{X^2}-\ev{X}^2\right)+\ev{X}^2\\
+                   &=\frac{\sigma^2}{N}+\hat{x}^2,
+    \end{aligned}
+  \end{equation*}
+  where in the second line we used the independence of the $X_i$. Finally
+  for the last term we have
+  $$
+    \ev{\bar{X}^2}=\ev{\frac{1}{N^2}\sum_{i,j}X_iX_j}
+        =\frac{1}{N^2}\left(N\ev{X^2}+\sum_{i,j\,|\,i\neq j}\hat{x}^2\right)
+        =\frac{\sigma^2}{N}+\hat{x}^2,
+  $$
+  where we again used independence in the second equality. Plugging
+  everything into $\ev{\bar{\sigma}^2_{\text{biased}}}$ gives
+  \begin{equation*}
+      \ev{\bar{\sigma}^2_{\text{biased}}}
+        =\frac{1}{N}\sum_{i=1}^N
+          \left(\ev{X^2}-\frac{\sigma^2}{N}-\hat{x}^2\right)
+        =\left(\frac{N-1}{N}\right)\sigma^2.
+  \end{equation*}
+  This equation shows us the bias is $-\sigma^2/N$. Therefore according
+  to this equation, an unbiased estimator of the variance is
+  $$
+    \bar{\sigma}^2=\left(\frac{N}{N-1}\right)\bar{\sigma}_\text{biased}^2
+                  =\frac{1}{N-1}\sum_{i=1}^N(X_i-\bar{X})^2
+  $$
+  as we wished to show.
+  \end{proof}
+\end{proposition}
+
+
 
 \section{Groups}
 
