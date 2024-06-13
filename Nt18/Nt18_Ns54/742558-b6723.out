@@ -1,0 +1,2244 @@
+
+Currently Loaded Modules:
+  1) chpc/1.0      (S)   3) gcc/8.5.0      5) mpich/3.4.2
+  2) python/3.10.3       4) cmake/3.26.0   6) cuda/11.6.2 (g)
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+   g:  built for GPU
+
+ 
+
+# [2024-05-07 15:50:06] INFO: Running SIMULATeQCD
+# [2024-05-07 15:50:06] INFO: Git commit version: 43e2518
+# [2024-05-07 15:50:06] INFO: Initializing MPI with (1 proc)
+# [2024-05-07 15:50:06] INFO: Reading parameters from file :: GenerateQuenched_b6723.param
+# [2024-05-07 15:50:07] INFO: # PARAM :: Lattice = 54 54 54 18 
+# [2024-05-07 15:50:07] INFO: # PARAM :: Nodes = 1 1 1 1 
+# [2024-05-07 15:50:07] INFO: # PARAM :: Topology = 0 0 0 0  (default)
+# [2024-05-07 15:50:07] INFO: # PARAM :: beta = 6.723
+# [2024-05-07 15:50:07] INFO: # PARAM :: format = nersc
+# [2024-05-07 15:50:07] INFO: # PARAM :: endianness = auto
+# [2024-05-07 15:50:07] INFO: # PARAM :: conf_nr = 2100000
+# [2024-05-07 15:50:07] INFO: # PARAM :: stream = a
+# [2024-05-07 15:50:07] INFO: # PARAM :: prec_out = 0 (default)
+# [2024-05-07 15:50:07] INFO: # PARAM :: measurements_dir = ./ (default)
+# [2024-05-07 15:50:07] INFO: # PARAM :: use_unit_conf = 0 (default)
+# [2024-05-07 15:50:07] INFO: # PARAM :: output_dir = .
+# [2024-05-07 15:50:07] INFO: # PARAM :: nconfs = 200
+# [2024-05-07 15:50:07] INFO: # PARAM :: nsweeps_ORperHB = 4
+# [2024-05-07 15:50:07] INFO: # PARAM :: nsweeps_HBwithOR = 500
+# [2024-05-07 15:50:07] INFO: # PARAM :: prev_conf = conf_s054t18_b0672300_a_U002100000
+# [2024-05-07 15:50:07] INFO: # PARAM :: prev_rand = rand_s054t18_b0672300_a_U002100000
+# [2024-05-07 15:50:07] INFO: > Running on:
+# [2024-05-07 15:50:07] INFO: [Rank 0] > notch087 CPU_1 GPU_3B; MPI: world_rank=0, node_rank=0, coord: ( 0 0 0 0 )
+# [2024-05-07 15:50:07] INFO: > Is MPI CUDA-aware? @compilation 
+# [2024-05-07 15:50:07] INFO: > GPU compute capability: 75
+# [2024-05-07 15:50:07] INFO: > Checking support for P2P (Peer-to-Peer) and UVA (Unified Virtual Addressing):
+# [2024-05-07 15:50:07] INFO: [Rank 0] > notch087 GPU_3B(NVIDIA GeForce RTX 2080 Ti): P2P NO ; UVA YES
+# [2024-05-07 15:50:07] INFO: Initialize Indexer with HaloDepth = 1[0;33m[0m
+# [2024-05-07 15:50:07] INFO: Resuming previous run.
+# [2024-05-07 15:50:07] INFO: readconf_nersc: Reading NERSC configuration conf_s054t18_b0672300_a_U002100000
+# [2024-05-07 15:50:19] INFO: Next conf_number will be 2100500
+# [2024-05-07 15:50:19] INFO: Generating up to 200 confs with a separation of 500 HBOR sweeps (OR/HB = 4) ...
+# [2024-05-07 15:50:19] INFO: ======================================================================
+# [2024-05-07 15:50:19] INFO: Start sweeping...
+# [2024-05-07 15:55:11] INFO: It took 292.436 seconds to do 500 HBOR sweeps.
+# [2024-05-07 15:55:11] INFO: Plaquette = 0.654168
+# [2024-05-07 15:55:11] INFO: Polyakov loop = (-0.00285598,-0.00432569)
+# [2024-05-07 15:55:11] INFO: Writing conf to disk...
+# [2024-05-07 15:55:11] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002100500
+# [2024-05-07 15:55:13] INFO: Calculated checksum: d6e20d2d
+# [2024-05-07 15:55:16] INFO: Calculated checksum: 7db4995d
+# [2024-05-07 15:55:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002100500
+# [2024-05-07 15:55:16] INFO: Writing to disk took 5.38604 seconds
+# [2024-05-07 15:55:16] INFO: ======================================================================
+# [2024-05-07 15:55:16] INFO: Start sweeping...
+# [2024-05-07 16:00:24] INFO: It took 307.684 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:00:24] INFO: Plaquette = 0.654107
+# [2024-05-07 16:00:24] INFO: Polyakov loop = (-0.00215319,-0.00364342)
+# [2024-05-07 16:00:24] INFO: Writing conf to disk...
+# [2024-05-07 16:00:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002101000
+# [2024-05-07 16:00:26] INFO: Calculated checksum: bb41f99f
+# [2024-05-07 16:00:33] INFO: Calculated checksum: 96f4c5a5
+# [2024-05-07 16:00:33] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002101000
+# [2024-05-07 16:00:33] INFO: Writing to disk took 8.44934 seconds
+# [2024-05-07 16:00:33] INFO: ======================================================================
+# [2024-05-07 16:00:33] INFO: Start sweeping...
+# [2024-05-07 16:05:40] INFO: It took 307.594 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:05:40] INFO: Plaquette = 0.654187
+# [2024-05-07 16:05:40] INFO: Polyakov loop = (-0.000545674,-0.00377492)
+# [2024-05-07 16:05:40] INFO: Writing conf to disk...
+# [2024-05-07 16:05:40] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002101500
+# [2024-05-07 16:05:42] INFO: Calculated checksum: a535e663
+# [2024-05-07 16:05:45] INFO: Calculated checksum: 42d984ac
+# [2024-05-07 16:05:45] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002101500
+# [2024-05-07 16:05:46] INFO: Writing to disk took 5.31164 seconds
+# [2024-05-07 16:05:46] INFO: ======================================================================
+# [2024-05-07 16:05:46] INFO: Start sweeping...
+# [2024-05-07 16:10:53] INFO: It took 307.902 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:10:54] INFO: Plaquette = 0.654067
+# [2024-05-07 16:10:54] INFO: Polyakov loop = (-0.00259343,-0.00379626)
+# [2024-05-07 16:10:54] INFO: Writing conf to disk...
+# [2024-05-07 16:10:54] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002102000
+# [2024-05-07 16:10:55] INFO: Calculated checksum: a416af41
+# [2024-05-07 16:10:59] INFO: Calculated checksum: 5cedf36f
+# [2024-05-07 16:10:59] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002102000
+# [2024-05-07 16:10:59] INFO: Writing to disk took 5.78509 seconds
+# [2024-05-07 16:10:59] INFO: ======================================================================
+# [2024-05-07 16:10:59] INFO: Start sweeping...
+# [2024-05-07 16:16:07] INFO: It took 307.904 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:16:07] INFO: Plaquette = 0.654185
+# [2024-05-07 16:16:07] INFO: Polyakov loop = (-0.00175935,-0.0028174)
+# [2024-05-07 16:16:07] INFO: Writing conf to disk...
+# [2024-05-07 16:16:07] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002102500
+# [2024-05-07 16:16:09] INFO: Calculated checksum: 9702879e
+# [2024-05-07 16:16:14] INFO: Calculated checksum: f78ced4a
+# [2024-05-07 16:16:14] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002102500
+# [2024-05-07 16:16:15] INFO: Writing to disk took 7.49654 seconds
+# [2024-05-07 16:16:15] INFO: ======================================================================
+# [2024-05-07 16:16:15] INFO: Start sweeping...
+# [2024-05-07 16:21:23] INFO: It took 307.845 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:21:23] INFO: Plaquette = 0.65418
+# [2024-05-07 16:21:23] INFO: Polyakov loop = (-0.00271545,-0.00316292)
+# [2024-05-07 16:21:23] INFO: Writing conf to disk...
+# [2024-05-07 16:21:23] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002103000
+# [2024-05-07 16:21:25] INFO: Calculated checksum: a76f4a
+# [2024-05-07 16:21:31] INFO: Calculated checksum: d095ce35
+# [2024-05-07 16:21:31] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002103000
+# [2024-05-07 16:21:31] INFO: Writing to disk took 8.09595 seconds
+# [2024-05-07 16:21:31] INFO: ======================================================================
+# [2024-05-07 16:21:31] INFO: Start sweeping...
+# [2024-05-07 16:26:39] INFO: It took 307.686 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:26:39] INFO: Plaquette = 0.654138
+# [2024-05-07 16:26:39] INFO: Polyakov loop = (-0.000989427,-0.00374508)
+# [2024-05-07 16:26:39] INFO: Writing conf to disk...
+# [2024-05-07 16:26:39] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002103500
+# [2024-05-07 16:26:41] INFO: Calculated checksum: a0a776f7
+# [2024-05-07 16:26:46] INFO: Calculated checksum: 4a29ba64
+# [2024-05-07 16:26:46] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002103500
+# [2024-05-07 16:26:46] INFO: Writing to disk took 7.53081 seconds
+# [2024-05-07 16:26:46] INFO: ======================================================================
+# [2024-05-07 16:26:46] INFO: Start sweeping...
+# [2024-05-07 16:31:55] INFO: It took 308.201 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:31:55] INFO: Plaquette = 0.654267
+# [2024-05-07 16:31:55] INFO: Polyakov loop = (-0.00231788,-0.00259211)
+# [2024-05-07 16:31:55] INFO: Writing conf to disk...
+# [2024-05-07 16:31:55] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002104000
+# [2024-05-07 16:31:57] INFO: Calculated checksum: ac08f1ac
+# [2024-05-07 16:32:04] INFO: Calculated checksum: bc02779a
+# [2024-05-07 16:32:04] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002104000
+# [2024-05-07 16:32:04] INFO: Writing to disk took 9.59047 seconds
+# [2024-05-07 16:32:04] INFO: ======================================================================
+# [2024-05-07 16:32:04] INFO: Start sweeping...
+# [2024-05-07 16:37:12] INFO: It took 307.761 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:37:12] INFO: Plaquette = 0.654139
+# [2024-05-07 16:37:12] INFO: Polyakov loop = (-0.00160462,-0.00211366)
+# [2024-05-07 16:37:12] INFO: Writing conf to disk...
+# [2024-05-07 16:37:12] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002104500
+# [2024-05-07 16:37:14] INFO: Calculated checksum: ef10e103
+# [2024-05-07 16:37:18] INFO: Calculated checksum: 816b1f0a
+# [2024-05-07 16:37:18] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002104500
+# [2024-05-07 16:37:19] INFO: Writing to disk took 6.7927 seconds
+# [2024-05-07 16:37:19] INFO: ======================================================================
+# [2024-05-07 16:37:19] INFO: Start sweeping...
+# [2024-05-07 16:42:27] INFO: It took 307.724 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:42:27] INFO: Plaquette = 0.654193
+# [2024-05-07 16:42:27] INFO: Polyakov loop = (-0.00172218,-0.00265364)
+# [2024-05-07 16:42:27] INFO: Writing conf to disk...
+# [2024-05-07 16:42:27] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002105000
+# [2024-05-07 16:42:29] INFO: Calculated checksum: e957bd35
+# [2024-05-07 16:42:32] INFO: Calculated checksum: 7ff36ee7
+# [2024-05-07 16:42:32] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002105000
+# [2024-05-07 16:42:33] INFO: Writing to disk took 6.26167 seconds
+# [2024-05-07 16:42:33] INFO: ======================================================================
+# [2024-05-07 16:42:33] INFO: Start sweeping...
+# [2024-05-07 16:47:41] INFO: It took 307.826 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:47:41] INFO: Plaquette = 0.654081
+# [2024-05-07 16:47:41] INFO: Polyakov loop = (-0.00232239,-0.00362066)
+# [2024-05-07 16:47:41] INFO: Writing conf to disk...
+# [2024-05-07 16:47:41] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002105500
+# [2024-05-07 16:47:43] INFO: Calculated checksum: 5d3b328
+# [2024-05-07 16:47:47] INFO: Calculated checksum: ccafd29d
+# [2024-05-07 16:47:47] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002105500
+# [2024-05-07 16:47:47] INFO: Writing to disk took 6.29651 seconds
+# [2024-05-07 16:47:47] INFO: ======================================================================
+# [2024-05-07 16:47:47] INFO: Start sweeping...
+# [2024-05-07 16:52:55] INFO: It took 307.813 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:52:56] INFO: Plaquette = 0.65417
+# [2024-05-07 16:52:56] INFO: Polyakov loop = (-0.00121678,-0.00294226)
+# [2024-05-07 16:52:56] INFO: Writing conf to disk...
+# [2024-05-07 16:52:56] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002106000
+# [2024-05-07 16:52:58] INFO: Calculated checksum: 7333e6d2
+# [2024-05-07 16:53:01] INFO: Calculated checksum: a7eb0cc0
+# [2024-05-07 16:53:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002106000
+# [2024-05-07 16:53:01] INFO: Writing to disk took 5.32971 seconds
+# [2024-05-07 16:53:01] INFO: ======================================================================
+# [2024-05-07 16:53:01] INFO: Start sweeping...
+# [2024-05-07 16:58:09] INFO: It took 307.886 seconds to do 500 HBOR sweeps.
+# [2024-05-07 16:58:09] INFO: Plaquette = 0.654173
+# [2024-05-07 16:58:09] INFO: Polyakov loop = (-0.00182058,-0.00368922)
+# [2024-05-07 16:58:09] INFO: Writing conf to disk...
+# [2024-05-07 16:58:09] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002106500
+# [2024-05-07 16:58:11] INFO: Calculated checksum: ea2c7fa1
+# [2024-05-07 16:58:14] INFO: Calculated checksum: 6b480981
+# [2024-05-07 16:58:14] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002106500
+# [2024-05-07 16:58:14] INFO: Writing to disk took 5.02126 seconds
+# [2024-05-07 16:58:14] INFO: ======================================================================
+# [2024-05-07 16:58:14] INFO: Start sweeping...
+# [2024-05-07 17:03:22] INFO: It took 307.888 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:03:22] INFO: Plaquette = 0.654083
+# [2024-05-07 17:03:22] INFO: Polyakov loop = (-0.00196947,-0.00302957)
+# [2024-05-07 17:03:22] INFO: Writing conf to disk...
+# [2024-05-07 17:03:22] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002107000
+# [2024-05-07 17:03:24] INFO: Calculated checksum: e0e5050f
+# [2024-05-07 17:03:27] INFO: Calculated checksum: 2af7726f
+# [2024-05-07 17:03:27] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002107000
+# [2024-05-07 17:03:27] INFO: Writing to disk took 5.03385 seconds
+# [2024-05-07 17:03:27] INFO: ======================================================================
+# [2024-05-07 17:03:27] INFO: Start sweeping...
+# [2024-05-07 17:08:35] INFO: It took 307.958 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:08:35] INFO: Plaquette = 0.654237
+# [2024-05-07 17:08:35] INFO: Polyakov loop = (-0.00325633,-0.00400867)
+# [2024-05-07 17:08:35] INFO: Writing conf to disk...
+# [2024-05-07 17:08:35] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002107500
+# [2024-05-07 17:08:37] INFO: Calculated checksum: 1fd87fed
+# [2024-05-07 17:08:42] INFO: Calculated checksum: d2266db7
+# [2024-05-07 17:08:42] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002107500
+# [2024-05-07 17:08:42] INFO: Writing to disk took 6.87903 seconds
+# [2024-05-07 17:08:42] INFO: ======================================================================
+# [2024-05-07 17:08:42] INFO: Start sweeping...
+# [2024-05-07 17:13:50] INFO: It took 307.77 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:13:50] INFO: Plaquette = 0.65422
+# [2024-05-07 17:13:50] INFO: Polyakov loop = (-0.00117921,-0.00336773)
+# [2024-05-07 17:13:50] INFO: Writing conf to disk...
+# [2024-05-07 17:13:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002108000
+# [2024-05-07 17:13:52] INFO: Calculated checksum: d5c32961
+# [2024-05-07 17:13:56] INFO: Calculated checksum: b8669e56
+# [2024-05-07 17:13:56] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002108000
+# [2024-05-07 17:13:56] INFO: Writing to disk took 6.85918 seconds
+# [2024-05-07 17:13:56] INFO: ======================================================================
+# [2024-05-07 17:13:56] INFO: Start sweeping...
+# [2024-05-07 17:19:04] INFO: It took 307.734 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:19:04] INFO: Plaquette = 0.654173
+# [2024-05-07 17:19:04] INFO: Polyakov loop = (-0.00195102,-0.00352314)
+# [2024-05-07 17:19:04] INFO: Writing conf to disk...
+# [2024-05-07 17:19:04] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002108500
+# [2024-05-07 17:19:06] INFO: Calculated checksum: 64ed3cf7
+# [2024-05-07 17:19:10] INFO: Calculated checksum: dd4cf1e2
+# [2024-05-07 17:19:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002108500
+# [2024-05-07 17:19:10] INFO: Writing to disk took 5.33217 seconds
+# [2024-05-07 17:19:10] INFO: ======================================================================
+# [2024-05-07 17:19:10] INFO: Start sweeping...
+# [2024-05-07 17:24:18] INFO: It took 307.926 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:24:18] INFO: Plaquette = 0.654226
+# [2024-05-07 17:24:18] INFO: Polyakov loop = (-0.00262688,-0.00318133)
+# [2024-05-07 17:24:18] INFO: Writing conf to disk...
+# [2024-05-07 17:24:18] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002109000
+# [2024-05-07 17:24:20] INFO: Calculated checksum: 41256b78
+# [2024-05-07 17:24:24] INFO: Calculated checksum: d6a99bd4
+# [2024-05-07 17:24:24] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002109000
+# [2024-05-07 17:24:24] INFO: Writing to disk took 6.77084 seconds
+# [2024-05-07 17:24:24] INFO: ======================================================================
+# [2024-05-07 17:24:24] INFO: Start sweeping...
+# [2024-05-07 17:29:32] INFO: It took 307.737 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:29:32] INFO: Plaquette = 0.654111
+# [2024-05-07 17:29:32] INFO: Polyakov loop = (-0.00248132,-0.00547065)
+# [2024-05-07 17:29:32] INFO: Writing conf to disk...
+# [2024-05-07 17:29:32] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002109500
+# [2024-05-07 17:29:34] INFO: Calculated checksum: e2afe136
+# [2024-05-07 17:29:37] INFO: Calculated checksum: 1c1fa0a5
+# [2024-05-07 17:29:37] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002109500
+# [2024-05-07 17:29:38] INFO: Writing to disk took 5.34155 seconds
+# [2024-05-07 17:29:38] INFO: ======================================================================
+# [2024-05-07 17:29:38] INFO: Start sweeping...
+# [2024-05-07 17:34:46] INFO: It took 307.986 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:34:46] INFO: Plaquette = 0.65409
+# [2024-05-07 17:34:46] INFO: Polyakov loop = (-0.00210162,-0.00345001)
+# [2024-05-07 17:34:46] INFO: Writing conf to disk...
+# [2024-05-07 17:34:46] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002110000
+# [2024-05-07 17:34:48] INFO: Calculated checksum: cf7e0c41
+# [2024-05-07 17:34:51] INFO: Calculated checksum: 72fe3fd1
+# [2024-05-07 17:34:51] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002110000
+# [2024-05-07 17:34:51] INFO: Writing to disk took 5.42975 seconds
+# [2024-05-07 17:34:51] INFO: ======================================================================
+# [2024-05-07 17:34:51] INFO: Start sweeping...
+# [2024-05-07 17:39:59] INFO: It took 308.012 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:39:59] INFO: Plaquette = 0.654098
+# [2024-05-07 17:39:59] INFO: Polyakov loop = (-0.00162794,-0.00397352)
+# [2024-05-07 17:39:59] INFO: Writing conf to disk...
+# [2024-05-07 17:39:59] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002110500
+# [2024-05-07 17:40:01] INFO: Calculated checksum: 8b340674
+# [2024-05-07 17:40:04] INFO: Calculated checksum: a83647a7
+# [2024-05-07 17:40:04] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002110500
+# [2024-05-07 17:40:04] INFO: Writing to disk took 4.96083 seconds
+# [2024-05-07 17:40:04] INFO: ======================================================================
+# [2024-05-07 17:40:04] INFO: Start sweeping...
+# [2024-05-07 17:45:12] INFO: It took 308.02 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:45:12] INFO: Plaquette = 0.654152
+# [2024-05-07 17:45:12] INFO: Polyakov loop = (-0.00291897,-0.0038943)
+# [2024-05-07 17:45:12] INFO: Writing conf to disk...
+# [2024-05-07 17:45:12] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002111000
+# [2024-05-07 17:45:14] INFO: Calculated checksum: 417e66c
+# [2024-05-07 17:45:17] INFO: Calculated checksum: fe3cb174
+# [2024-05-07 17:45:17] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002111000
+# [2024-05-07 17:45:17] INFO: Writing to disk took 5.13297 seconds
+# [2024-05-07 17:45:17] INFO: ======================================================================
+# [2024-05-07 17:45:17] INFO: Start sweeping...
+# [2024-05-07 17:50:25] INFO: It took 307.914 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:50:25] INFO: Plaquette = 0.654095
+# [2024-05-07 17:50:25] INFO: Polyakov loop = (-0.00134313,-0.00335772)
+# [2024-05-07 17:50:25] INFO: Writing conf to disk...
+# [2024-05-07 17:50:25] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002111500
+# [2024-05-07 17:50:27] INFO: Calculated checksum: 738e3882
+# [2024-05-07 17:50:30] INFO: Calculated checksum: c928cf61
+# [2024-05-07 17:50:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002111500
+# [2024-05-07 17:50:30] INFO: Writing to disk took 5.06675 seconds
+# [2024-05-07 17:50:30] INFO: ======================================================================
+# [2024-05-07 17:50:30] INFO: Start sweeping...
+# [2024-05-07 17:55:38] INFO: It took 307.978 seconds to do 500 HBOR sweeps.
+# [2024-05-07 17:55:38] INFO: Plaquette = 0.65424
+# [2024-05-07 17:55:38] INFO: Polyakov loop = (-0.00151467,-0.00332928)
+# [2024-05-07 17:55:38] INFO: Writing conf to disk...
+# [2024-05-07 17:55:38] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002112000
+# [2024-05-07 17:55:40] INFO: Calculated checksum: b639bccb
+# [2024-05-07 17:55:43] INFO: Calculated checksum: f8de3aa7
+# [2024-05-07 17:55:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002112000
+# [2024-05-07 17:55:43] INFO: Writing to disk took 4.95897 seconds
+# [2024-05-07 17:55:43] INFO: ======================================================================
+# [2024-05-07 17:55:43] INFO: Start sweeping...
+# [2024-05-07 18:00:51] INFO: It took 308.007 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:00:51] INFO: Plaquette = 0.654071
+# [2024-05-07 18:00:51] INFO: Polyakov loop = (-0.0013286,-0.00233401)
+# [2024-05-07 18:00:51] INFO: Writing conf to disk...
+# [2024-05-07 18:00:51] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002112500
+# [2024-05-07 18:00:53] INFO: Calculated checksum: 4af473bb
+# [2024-05-07 18:00:57] INFO: Calculated checksum: 47a74d3b
+# [2024-05-07 18:00:57] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002112500
+# [2024-05-07 18:00:57] INFO: Writing to disk took 5.44307 seconds
+# [2024-05-07 18:00:57] INFO: ======================================================================
+# [2024-05-07 18:00:57] INFO: Start sweeping...
+# [2024-05-07 18:06:05] INFO: It took 307.845 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:06:05] INFO: Plaquette = 0.654229
+# [2024-05-07 18:06:05] INFO: Polyakov loop = (-0.00173209,-0.00339263)
+# [2024-05-07 18:06:05] INFO: Writing conf to disk...
+# [2024-05-07 18:06:05] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002113000
+# [2024-05-07 18:06:06] INFO: Calculated checksum: 95945089
+# [2024-05-07 18:06:16] INFO: Calculated checksum: 3ef66b73
+# [2024-05-07 18:06:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002113000
+# [2024-05-07 18:06:16] INFO: Writing to disk took 11.395 seconds
+# [2024-05-07 18:06:16] INFO: ======================================================================
+# [2024-05-07 18:06:16] INFO: Start sweeping...
+# [2024-05-07 18:11:24] INFO: It took 308.001 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:11:24] INFO: Plaquette = 0.654224
+# [2024-05-07 18:11:24] INFO: Polyakov loop = (-0.00291192,-0.00366983)
+# [2024-05-07 18:11:24] INFO: Writing conf to disk...
+# [2024-05-07 18:11:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002113500
+# [2024-05-07 18:11:26] INFO: Calculated checksum: 1321c0dc
+# [2024-05-07 18:11:29] INFO: Calculated checksum: 7f2c5901
+# [2024-05-07 18:11:29] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002113500
+# [2024-05-07 18:11:29] INFO: Writing to disk took 5.26861 seconds
+# [2024-05-07 18:11:29] INFO: ======================================================================
+# [2024-05-07 18:11:29] INFO: Start sweeping...
+# [2024-05-07 18:16:37] INFO: It took 307.99 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:16:37] INFO: Plaquette = 0.654105
+# [2024-05-07 18:16:37] INFO: Polyakov loop = (-0.00299553,-0.00412353)
+# [2024-05-07 18:16:37] INFO: Writing conf to disk...
+# [2024-05-07 18:16:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002114000
+# [2024-05-07 18:16:39] INFO: Calculated checksum: 9f7f0ee2
+# [2024-05-07 18:16:43] INFO: Calculated checksum: ee8f91ae
+# [2024-05-07 18:16:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002114000
+# [2024-05-07 18:16:43] INFO: Writing to disk took 6.11034 seconds
+# [2024-05-07 18:16:43] INFO: ======================================================================
+# [2024-05-07 18:16:43] INFO: Start sweeping...
+# [2024-05-07 18:21:51] INFO: It took 307.901 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:21:51] INFO: Plaquette = 0.654206
+# [2024-05-07 18:21:51] INFO: Polyakov loop = (-0.00193899,-0.0045108)
+# [2024-05-07 18:21:51] INFO: Writing conf to disk...
+# [2024-05-07 18:21:51] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002114500
+# [2024-05-07 18:21:53] INFO: Calculated checksum: 697d3ba0
+# [2024-05-07 18:21:56] INFO: Calculated checksum: 201f3dc8
+# [2024-05-07 18:21:56] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002114500
+# [2024-05-07 18:21:56] INFO: Writing to disk took 5.1465 seconds
+# [2024-05-07 18:21:56] INFO: ======================================================================
+# [2024-05-07 18:21:56] INFO: Start sweeping...
+# [2024-05-07 18:27:04] INFO: It took 307.918 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:27:04] INFO: Plaquette = 0.65416
+# [2024-05-07 18:27:04] INFO: Polyakov loop = (-0.000513338,-0.00300577)
+# [2024-05-07 18:27:04] INFO: Writing conf to disk...
+# [2024-05-07 18:27:04] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002115000
+# [2024-05-07 18:27:06] INFO: Calculated checksum: 9ca7a60c
+# [2024-05-07 18:27:16] INFO: Calculated checksum: 7777a2ce
+# [2024-05-07 18:27:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002115000
+# [2024-05-07 18:27:16] INFO: Writing to disk took 11.5854 seconds
+# [2024-05-07 18:27:16] INFO: ======================================================================
+# [2024-05-07 18:27:16] INFO: Start sweeping...
+# [2024-05-07 18:32:24] INFO: It took 308.384 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:32:24] INFO: Plaquette = 0.654188
+# [2024-05-07 18:32:24] INFO: Polyakov loop = (-0.00224373,-0.00378965)
+# [2024-05-07 18:32:24] INFO: Writing conf to disk...
+# [2024-05-07 18:32:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002115500
+# [2024-05-07 18:32:26] INFO: Calculated checksum: 4da4e34b
+# [2024-05-07 18:32:30] INFO: Calculated checksum: 9692814a
+# [2024-05-07 18:32:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002115500
+# [2024-05-07 18:32:30] INFO: Writing to disk took 5.1472 seconds
+# [2024-05-07 18:32:30] INFO: ======================================================================
+# [2024-05-07 18:32:30] INFO: Start sweeping...
+# [2024-05-07 18:37:37] INFO: It took 307.845 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:37:37] INFO: Plaquette = 0.654177
+# [2024-05-07 18:37:37] INFO: Polyakov loop = (-0.00244157,-0.00347838)
+# [2024-05-07 18:37:37] INFO: Writing conf to disk...
+# [2024-05-07 18:37:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002116000
+# [2024-05-07 18:37:39] INFO: Calculated checksum: 17a24bc5
+# [2024-05-07 18:37:43] INFO: Calculated checksum: 78cc3eeb
+# [2024-05-07 18:37:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002116000
+# [2024-05-07 18:37:43] INFO: Writing to disk took 5.17348 seconds
+# [2024-05-07 18:37:43] INFO: ======================================================================
+# [2024-05-07 18:37:43] INFO: Start sweeping...
+# [2024-05-07 18:42:51] INFO: It took 307.909 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:42:51] INFO: Plaquette = 0.654185
+# [2024-05-07 18:42:51] INFO: Polyakov loop = (-0.00175293,-0.00346972)
+# [2024-05-07 18:42:51] INFO: Writing conf to disk...
+# [2024-05-07 18:42:51] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002116500
+# [2024-05-07 18:42:52] INFO: Calculated checksum: 97414305
+# [2024-05-07 18:42:55] INFO: Calculated checksum: 1fdb26bf
+# [2024-05-07 18:42:55] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002116500
+# [2024-05-07 18:42:55] INFO: Writing to disk took 4.90562 seconds
+# [2024-05-07 18:42:55] INFO: ======================================================================
+# [2024-05-07 18:42:55] INFO: Start sweeping...
+# [2024-05-07 18:48:04] INFO: It took 308.035 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:48:04] INFO: Plaquette = 0.654156
+# [2024-05-07 18:48:04] INFO: Polyakov loop = (-0.00145021,-0.00289586)
+# [2024-05-07 18:48:04] INFO: Writing conf to disk...
+# [2024-05-07 18:48:04] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002117000
+# [2024-05-07 18:48:06] INFO: Calculated checksum: 9650b43d
+# [2024-05-07 18:48:10] INFO: Calculated checksum: 24f0039a
+# [2024-05-07 18:48:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002117000
+# [2024-05-07 18:48:10] INFO: Writing to disk took 6.24291 seconds
+# [2024-05-07 18:48:10] INFO: ======================================================================
+# [2024-05-07 18:48:10] INFO: Start sweeping...
+# [2024-05-07 18:53:18] INFO: It took 308.114 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:53:18] INFO: Plaquette = 0.654211
+# [2024-05-07 18:53:18] INFO: Polyakov loop = (-0.00303283,-0.00227892)
+# [2024-05-07 18:53:18] INFO: Writing conf to disk...
+# [2024-05-07 18:53:18] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002117500
+# [2024-05-07 18:53:20] INFO: Calculated checksum: 219e366f
+# [2024-05-07 18:53:23] INFO: Calculated checksum: ca53a37
+# [2024-05-07 18:53:23] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002117500
+# [2024-05-07 18:53:23] INFO: Writing to disk took 4.94589 seconds
+# [2024-05-07 18:53:23] INFO: ======================================================================
+# [2024-05-07 18:53:23] INFO: Start sweeping...
+# [2024-05-07 18:58:31] INFO: It took 308.034 seconds to do 500 HBOR sweeps.
+# [2024-05-07 18:58:31] INFO: Plaquette = 0.654136
+# [2024-05-07 18:58:31] INFO: Polyakov loop = (-0.00170222,-0.0031649)
+# [2024-05-07 18:58:31] INFO: Writing conf to disk...
+# [2024-05-07 18:58:31] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002118000
+# [2024-05-07 18:58:33] INFO: Calculated checksum: 215eee3e
+# [2024-05-07 18:58:36] INFO: Calculated checksum: 282ec0da
+# [2024-05-07 18:58:36] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002118000
+# [2024-05-07 18:58:36] INFO: Writing to disk took 4.92093 seconds
+# [2024-05-07 18:58:36] INFO: ======================================================================
+# [2024-05-07 18:58:36] INFO: Start sweeping...
+# [2024-05-07 19:03:44] INFO: It took 307.988 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:03:44] INFO: Plaquette = 0.654053
+# [2024-05-07 19:03:44] INFO: Polyakov loop = (-0.00146541,-0.0016831)
+# [2024-05-07 19:03:44] INFO: Writing conf to disk...
+# [2024-05-07 19:03:44] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002118500
+# [2024-05-07 19:03:46] INFO: Calculated checksum: f7ae292
+# [2024-05-07 19:03:49] INFO: Calculated checksum: 1aed7de
+# [2024-05-07 19:03:49] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002118500
+# [2024-05-07 19:03:49] INFO: Writing to disk took 4.95029 seconds
+# [2024-05-07 19:03:49] INFO: ======================================================================
+# [2024-05-07 19:03:49] INFO: Start sweeping...
+# [2024-05-07 19:08:57] INFO: It took 307.964 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:08:57] INFO: Plaquette = 0.654162
+# [2024-05-07 19:08:57] INFO: Polyakov loop = (-0.00209736,-0.00443088)
+# [2024-05-07 19:08:57] INFO: Writing conf to disk...
+# [2024-05-07 19:08:57] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002119000
+# [2024-05-07 19:08:59] INFO: Calculated checksum: 58edeb70
+# [2024-05-07 19:09:02] INFO: Calculated checksum: c721c8e3
+# [2024-05-07 19:09:02] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002119000
+# [2024-05-07 19:09:02] INFO: Writing to disk took 4.90914 seconds
+# [2024-05-07 19:09:02] INFO: ======================================================================
+# [2024-05-07 19:09:02] INFO: Start sweeping...
+# [2024-05-07 19:14:10] INFO: It took 307.942 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:14:10] INFO: Plaquette = 0.654119
+# [2024-05-07 19:14:10] INFO: Polyakov loop = (-0.00192183,-0.00250132)
+# [2024-05-07 19:14:10] INFO: Writing conf to disk...
+# [2024-05-07 19:14:10] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002119500
+# [2024-05-07 19:14:12] INFO: Calculated checksum: 5cb25398
+# [2024-05-07 19:14:15] INFO: Calculated checksum: 6a364124
+# [2024-05-07 19:14:15] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002119500
+# [2024-05-07 19:14:15] INFO: Writing to disk took 4.89589 seconds
+# [2024-05-07 19:14:15] INFO: ======================================================================
+# [2024-05-07 19:14:15] INFO: Start sweeping...
+# [2024-05-07 19:19:23] INFO: It took 307.97 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:19:23] INFO: Plaquette = 0.654284
+# [2024-05-07 19:19:23] INFO: Polyakov loop = (-0.00160983,-0.00268227)
+# [2024-05-07 19:19:23] INFO: Writing conf to disk...
+# [2024-05-07 19:19:23] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002120000
+# [2024-05-07 19:19:25] INFO: Calculated checksum: 59ee6ab7
+# [2024-05-07 19:19:28] INFO: Calculated checksum: 2e83ff3d
+# [2024-05-07 19:19:28] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002120000
+# [2024-05-07 19:19:28] INFO: Writing to disk took 4.97847 seconds
+# [2024-05-07 19:19:28] INFO: ======================================================================
+# [2024-05-07 19:19:28] INFO: Start sweeping...
+# [2024-05-07 19:24:36] INFO: It took 307.991 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:24:36] INFO: Plaquette = 0.654198
+# [2024-05-07 19:24:36] INFO: Polyakov loop = (-0.00323424,-0.00383334)
+# [2024-05-07 19:24:36] INFO: Writing conf to disk...
+# [2024-05-07 19:24:36] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002120500
+# [2024-05-07 19:24:38] INFO: Calculated checksum: 6fcf91d
+# [2024-05-07 19:24:41] INFO: Calculated checksum: 77c87865
+# [2024-05-07 19:24:41] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002120500
+# [2024-05-07 19:24:41] INFO: Writing to disk took 4.97173 seconds
+# [2024-05-07 19:24:41] INFO: ======================================================================
+# [2024-05-07 19:24:41] INFO: Start sweeping...
+# [2024-05-07 19:29:49] INFO: It took 307.98 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:29:49] INFO: Plaquette = 0.654134
+# [2024-05-07 19:29:49] INFO: Polyakov loop = (-0.00273619,-0.00197217)
+# [2024-05-07 19:29:49] INFO: Writing conf to disk...
+# [2024-05-07 19:29:49] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002121000
+# [2024-05-07 19:29:51] INFO: Calculated checksum: a1b1d3c7
+# [2024-05-07 19:29:54] INFO: Calculated checksum: 3dff8de0
+# [2024-05-07 19:29:54] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002121000
+# [2024-05-07 19:29:54] INFO: Writing to disk took 4.92099 seconds
+# [2024-05-07 19:29:54] INFO: ======================================================================
+# [2024-05-07 19:29:54] INFO: Start sweeping...
+# [2024-05-07 19:35:02] INFO: It took 307.993 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:35:02] INFO: Plaquette = 0.6542
+# [2024-05-07 19:35:02] INFO: Polyakov loop = (-0.00353556,-0.0033492)
+# [2024-05-07 19:35:02] INFO: Writing conf to disk...
+# [2024-05-07 19:35:02] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002121500
+# [2024-05-07 19:35:04] INFO: Calculated checksum: 5e0d7080
+# [2024-05-07 19:35:07] INFO: Calculated checksum: a280ec92
+# [2024-05-07 19:35:07] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002121500
+# [2024-05-07 19:35:07] INFO: Writing to disk took 4.92846 seconds
+# [2024-05-07 19:35:07] INFO: ======================================================================
+# [2024-05-07 19:35:07] INFO: Start sweeping...
+# [2024-05-07 19:40:15] INFO: It took 308.017 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:40:15] INFO: Plaquette = 0.654165
+# [2024-05-07 19:40:15] INFO: Polyakov loop = (-0.00258653,-0.0041555)
+# [2024-05-07 19:40:15] INFO: Writing conf to disk...
+# [2024-05-07 19:40:15] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002122000
+# [2024-05-07 19:40:17] INFO: Calculated checksum: fda5d643
+# [2024-05-07 19:40:20] INFO: Calculated checksum: b0e16f17
+# [2024-05-07 19:40:20] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002122000
+# [2024-05-07 19:40:20] INFO: Writing to disk took 5.63311 seconds
+# [2024-05-07 19:40:20] INFO: ======================================================================
+# [2024-05-07 19:40:20] INFO: Start sweeping...
+# [2024-05-07 19:45:28] INFO: It took 307.824 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:45:28] INFO: Plaquette = 0.654211
+# [2024-05-07 19:45:28] INFO: Polyakov loop = (-0.00205491,-0.00322249)
+# [2024-05-07 19:45:28] INFO: Writing conf to disk...
+# [2024-05-07 19:45:28] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002122500
+# [2024-05-07 19:45:30] INFO: Calculated checksum: b48d8010
+# [2024-05-07 19:45:33] INFO: Calculated checksum: 4bd23567
+# [2024-05-07 19:45:33] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002122500
+# [2024-05-07 19:45:33] INFO: Writing to disk took 4.93053 seconds
+# [2024-05-07 19:45:33] INFO: ======================================================================
+# [2024-05-07 19:45:33] INFO: Start sweeping...
+# [2024-05-07 19:50:41] INFO: It took 307.987 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:50:41] INFO: Plaquette = 0.654138
+# [2024-05-07 19:50:41] INFO: Polyakov loop = (-0.00186073,-0.00235036)
+# [2024-05-07 19:50:41] INFO: Writing conf to disk...
+# [2024-05-07 19:50:41] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002123000
+# [2024-05-07 19:50:43] INFO: Calculated checksum: 61e7947b
+# [2024-05-07 19:50:46] INFO: Calculated checksum: da10b013
+# [2024-05-07 19:50:46] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002123000
+# [2024-05-07 19:50:46] INFO: Writing to disk took 4.89954 seconds
+# [2024-05-07 19:50:46] INFO: ======================================================================
+# [2024-05-07 19:50:46] INFO: Start sweeping...
+# [2024-05-07 19:55:54] INFO: It took 308.49 seconds to do 500 HBOR sweeps.
+# [2024-05-07 19:55:55] INFO: Plaquette = 0.654086
+# [2024-05-07 19:55:55] INFO: Polyakov loop = (-0.00150534,-0.0041285)
+# [2024-05-07 19:55:55] INFO: Writing conf to disk...
+# [2024-05-07 19:55:55] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002123500
+# [2024-05-07 19:55:56] INFO: Calculated checksum: fc8c6da8
+# [2024-05-07 19:55:59] INFO: Calculated checksum: ebf95b1f
+# [2024-05-07 19:55:59] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002123500
+# [2024-05-07 19:55:59] INFO: Writing to disk took 4.94145 seconds
+# [2024-05-07 19:55:59] INFO: ======================================================================
+# [2024-05-07 19:55:59] INFO: Start sweeping...
+# [2024-05-07 20:01:07] INFO: It took 307.946 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:01:07] INFO: Plaquette = 0.654226
+# [2024-05-07 20:01:07] INFO: Polyakov loop = (-0.00144587,-0.00433535)
+# [2024-05-07 20:01:07] INFO: Writing conf to disk...
+# [2024-05-07 20:01:07] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002124000
+# [2024-05-07 20:01:09] INFO: Calculated checksum: f048b2e9
+# [2024-05-07 20:01:12] INFO: Calculated checksum: 7f27810a
+# [2024-05-07 20:01:12] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002124000
+# [2024-05-07 20:01:12] INFO: Writing to disk took 4.93113 seconds
+# [2024-05-07 20:01:12] INFO: ======================================================================
+# [2024-05-07 20:01:12] INFO: Start sweeping...
+# [2024-05-07 20:06:20] INFO: It took 308.005 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:06:20] INFO: Plaquette = 0.654178
+# [2024-05-07 20:06:20] INFO: Polyakov loop = (-0.00168979,-0.0026999)
+# [2024-05-07 20:06:20] INFO: Writing conf to disk...
+# [2024-05-07 20:06:20] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002124500
+# [2024-05-07 20:06:22] INFO: Calculated checksum: b9f55cda
+# [2024-05-07 20:06:25] INFO: Calculated checksum: 518cbd0c
+# [2024-05-07 20:06:25] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002124500
+# [2024-05-07 20:06:25] INFO: Writing to disk took 4.8967 seconds
+# [2024-05-07 20:06:25] INFO: ======================================================================
+# [2024-05-07 20:06:25] INFO: Start sweeping...
+# [2024-05-07 20:11:33] INFO: It took 308.001 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:11:33] INFO: Plaquette = 0.654054
+# [2024-05-07 20:11:33] INFO: Polyakov loop = (-0.00194567,-0.00305136)
+# [2024-05-07 20:11:33] INFO: Writing conf to disk...
+# [2024-05-07 20:11:33] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002125000
+# [2024-05-07 20:11:35] INFO: Calculated checksum: 4c5f1276
+# [2024-05-07 20:11:38] INFO: Calculated checksum: bb48ca37
+# [2024-05-07 20:11:38] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002125000
+# [2024-05-07 20:11:38] INFO: Writing to disk took 4.91894 seconds
+# [2024-05-07 20:11:38] INFO: ======================================================================
+# [2024-05-07 20:11:38] INFO: Start sweeping...
+# [2024-05-07 20:16:46] INFO: It took 307.978 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:16:46] INFO: Plaquette = 0.654024
+# [2024-05-07 20:16:46] INFO: Polyakov loop = (-0.00225538,-0.00312412)
+# [2024-05-07 20:16:46] INFO: Writing conf to disk...
+# [2024-05-07 20:16:46] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002125500
+# [2024-05-07 20:16:48] INFO: Calculated checksum: f1b2b9b8
+# [2024-05-07 20:16:51] INFO: Calculated checksum: a222d03
+# [2024-05-07 20:16:51] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002125500
+# [2024-05-07 20:16:51] INFO: Writing to disk took 4.95476 seconds
+# [2024-05-07 20:16:51] INFO: ======================================================================
+# [2024-05-07 20:16:51] INFO: Start sweeping...
+# [2024-05-07 20:21:59] INFO: It took 308.027 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:21:59] INFO: Plaquette = 0.654209
+# [2024-05-07 20:21:59] INFO: Polyakov loop = (-0.00283514,-0.00412021)
+# [2024-05-07 20:21:59] INFO: Writing conf to disk...
+# [2024-05-07 20:21:59] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002126000
+# [2024-05-07 20:22:01] INFO: Calculated checksum: 6cfeb443
+# [2024-05-07 20:22:04] INFO: Calculated checksum: 8ff90342
+# [2024-05-07 20:22:04] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002126000
+# [2024-05-07 20:22:04] INFO: Writing to disk took 4.9613 seconds
+# [2024-05-07 20:22:04] INFO: ======================================================================
+# [2024-05-07 20:22:04] INFO: Start sweeping...
+# [2024-05-07 20:27:12] INFO: It took 308.027 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:27:12] INFO: Plaquette = 0.65415
+# [2024-05-07 20:27:12] INFO: Polyakov loop = (-0.00236602,-0.0035004)
+# [2024-05-07 20:27:12] INFO: Writing conf to disk...
+# [2024-05-07 20:27:12] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002126500
+# [2024-05-07 20:27:14] INFO: Calculated checksum: 5b42487a
+# [2024-05-07 20:27:17] INFO: Calculated checksum: 847806c4
+# [2024-05-07 20:27:17] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002126500
+# [2024-05-07 20:27:17] INFO: Writing to disk took 4.92423 seconds
+# [2024-05-07 20:27:17] INFO: ======================================================================
+# [2024-05-07 20:27:17] INFO: Start sweeping...
+# [2024-05-07 20:32:26] INFO: It took 308.585 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:32:26] INFO: Plaquette = 0.654029
+# [2024-05-07 20:32:26] INFO: Polyakov loop = (-0.00196636,-0.00225098)
+# [2024-05-07 20:32:26] INFO: Writing conf to disk...
+# [2024-05-07 20:32:26] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002127000
+# [2024-05-07 20:32:28] INFO: Calculated checksum: 482969e0
+# [2024-05-07 20:32:31] INFO: Calculated checksum: 96d68a45
+# [2024-05-07 20:32:31] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002127000
+# [2024-05-07 20:32:31] INFO: Writing to disk took 4.91337 seconds
+# [2024-05-07 20:32:31] INFO: ======================================================================
+# [2024-05-07 20:32:31] INFO: Start sweeping...
+# [2024-05-07 20:37:39] INFO: It took 308.028 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:37:39] INFO: Plaquette = 0.654095
+# [2024-05-07 20:37:39] INFO: Polyakov loop = (-0.00315178,-0.0037346)
+# [2024-05-07 20:37:39] INFO: Writing conf to disk...
+# [2024-05-07 20:37:39] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002127500
+# [2024-05-07 20:37:41] INFO: Calculated checksum: 9e4806da
+# [2024-05-07 20:37:44] INFO: Calculated checksum: 55521124
+# [2024-05-07 20:37:44] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002127500
+# [2024-05-07 20:37:44] INFO: Writing to disk took 4.92226 seconds
+# [2024-05-07 20:37:44] INFO: ======================================================================
+# [2024-05-07 20:37:44] INFO: Start sweeping...
+# [2024-05-07 20:42:52] INFO: It took 308.004 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:42:52] INFO: Plaquette = 0.654196
+# [2024-05-07 20:42:52] INFO: Polyakov loop = (-0.00082244,-0.0017069)
+# [2024-05-07 20:42:52] INFO: Writing conf to disk...
+# [2024-05-07 20:42:52] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002128000
+# [2024-05-07 20:42:54] INFO: Calculated checksum: e1da9470
+# [2024-05-07 20:42:57] INFO: Calculated checksum: 6ca4ae80
+# [2024-05-07 20:42:57] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002128000
+# [2024-05-07 20:42:57] INFO: Writing to disk took 4.966 seconds
+# [2024-05-07 20:42:57] INFO: ======================================================================
+# [2024-05-07 20:42:57] INFO: Start sweeping...
+# [2024-05-07 20:48:05] INFO: It took 307.986 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:48:05] INFO: Plaquette = 0.654167
+# [2024-05-07 20:48:05] INFO: Polyakov loop = (-0.0013455,-0.00344293)
+# [2024-05-07 20:48:05] INFO: Writing conf to disk...
+# [2024-05-07 20:48:05] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002128500
+# [2024-05-07 20:48:07] INFO: Calculated checksum: 89e8e1c2
+# [2024-05-07 20:48:10] INFO: Calculated checksum: 4f75ee2c
+# [2024-05-07 20:48:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002128500
+# [2024-05-07 20:48:10] INFO: Writing to disk took 4.88675 seconds
+# [2024-05-07 20:48:10] INFO: ======================================================================
+# [2024-05-07 20:48:10] INFO: Start sweeping...
+# [2024-05-07 20:53:18] INFO: It took 307.978 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:53:18] INFO: Plaquette = 0.654151
+# [2024-05-07 20:53:18] INFO: Polyakov loop = (-0.00136412,-0.00389775)
+# [2024-05-07 20:53:18] INFO: Writing conf to disk...
+# [2024-05-07 20:53:18] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002129000
+# [2024-05-07 20:53:20] INFO: Calculated checksum: 22734e76
+# [2024-05-07 20:53:22] INFO: Calculated checksum: 3a7515ad
+# [2024-05-07 20:53:22] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002129000
+# [2024-05-07 20:53:23] INFO: Writing to disk took 4.91678 seconds
+# [2024-05-07 20:53:23] INFO: ======================================================================
+# [2024-05-07 20:53:23] INFO: Start sweeping...
+# [2024-05-07 20:58:31] INFO: It took 308.512 seconds to do 500 HBOR sweeps.
+# [2024-05-07 20:58:31] INFO: Plaquette = 0.654215
+# [2024-05-07 20:58:31] INFO: Polyakov loop = (-0.00224425,-0.00308752)
+# [2024-05-07 20:58:31] INFO: Writing conf to disk...
+# [2024-05-07 20:58:31] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002129500
+# [2024-05-07 20:58:33] INFO: Calculated checksum: 71e72da3
+# [2024-05-07 20:58:36] INFO: Calculated checksum: a4e61ad
+# [2024-05-07 20:58:36] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002129500
+# [2024-05-07 20:58:36] INFO: Writing to disk took 4.92019 seconds
+# [2024-05-07 20:58:36] INFO: ======================================================================
+# [2024-05-07 20:58:36] INFO: Start sweeping...
+# [2024-05-07 21:03:44] INFO: It took 307.894 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:03:44] INFO: Plaquette = 0.654133
+# [2024-05-07 21:03:44] INFO: Polyakov loop = (-0.00177895,-0.00239742)
+# [2024-05-07 21:03:44] INFO: Writing conf to disk...
+# [2024-05-07 21:03:44] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002130000
+# [2024-05-07 21:03:46] INFO: Calculated checksum: 420dfad4
+# [2024-05-07 21:03:49] INFO: Calculated checksum: b44c5636
+# [2024-05-07 21:03:49] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002130000
+# [2024-05-07 21:03:49] INFO: Writing to disk took 4.98459 seconds
+# [2024-05-07 21:03:49] INFO: ======================================================================
+# [2024-05-07 21:03:49] INFO: Start sweeping...
+# [2024-05-07 21:08:57] INFO: It took 308.01 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:08:57] INFO: Plaquette = 0.654123
+# [2024-05-07 21:08:57] INFO: Polyakov loop = (-0.00124162,-0.00141964)
+# [2024-05-07 21:08:57] INFO: Writing conf to disk...
+# [2024-05-07 21:08:57] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002130500
+# [2024-05-07 21:08:59] INFO: Calculated checksum: ce985509
+# [2024-05-07 21:09:02] INFO: Calculated checksum: 5956f2fa
+# [2024-05-07 21:09:02] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002130500
+# [2024-05-07 21:09:02] INFO: Writing to disk took 5.05431 seconds
+# [2024-05-07 21:09:02] INFO: ======================================================================
+# [2024-05-07 21:09:02] INFO: Start sweeping...
+# [2024-05-07 21:14:10] INFO: It took 308.02 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:14:10] INFO: Plaquette = 0.654167
+# [2024-05-07 21:14:10] INFO: Polyakov loop = (-0.00097209,-0.00275579)
+# [2024-05-07 21:14:10] INFO: Writing conf to disk...
+# [2024-05-07 21:14:10] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002131000
+# [2024-05-07 21:14:12] INFO: Calculated checksum: 62b8d280
+# [2024-05-07 21:14:15] INFO: Calculated checksum: 8498edbf
+# [2024-05-07 21:14:15] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002131000
+# [2024-05-07 21:14:15] INFO: Writing to disk took 5.10017 seconds
+# [2024-05-07 21:14:15] INFO: ======================================================================
+# [2024-05-07 21:14:15] INFO: Start sweeping...
+# [2024-05-07 21:19:23] INFO: It took 308.033 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:19:23] INFO: Plaquette = 0.654205
+# [2024-05-07 21:19:23] INFO: Polyakov loop = (-0.00155608,-0.00324909)
+# [2024-05-07 21:19:23] INFO: Writing conf to disk...
+# [2024-05-07 21:19:23] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002131500
+# [2024-05-07 21:19:25] INFO: Calculated checksum: f0c2cc53
+# [2024-05-07 21:19:28] INFO: Calculated checksum: 8fb2fc73
+# [2024-05-07 21:19:28] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002131500
+# [2024-05-07 21:19:28] INFO: Writing to disk took 5.04746 seconds
+# [2024-05-07 21:19:28] INFO: ======================================================================
+# [2024-05-07 21:19:28] INFO: Start sweeping...
+# [2024-05-07 21:24:36] INFO: It took 307.975 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:24:36] INFO: Plaquette = 0.654231
+# [2024-05-07 21:24:36] INFO: Polyakov loop = (-0.00202367,-0.00378261)
+# [2024-05-07 21:24:36] INFO: Writing conf to disk...
+# [2024-05-07 21:24:36] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002132000
+# [2024-05-07 21:24:38] INFO: Calculated checksum: 6a642855
+# [2024-05-07 21:24:41] INFO: Calculated checksum: 56145423
+# [2024-05-07 21:24:41] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002132000
+# [2024-05-07 21:24:41] INFO: Writing to disk took 5.11442 seconds
+# [2024-05-07 21:24:41] INFO: ======================================================================
+# [2024-05-07 21:24:41] INFO: Start sweeping...
+# [2024-05-07 21:29:49] INFO: It took 308.021 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:29:49] INFO: Plaquette = 0.654203
+# [2024-05-07 21:29:49] INFO: Polyakov loop = (-0.00115686,-0.00322968)
+# [2024-05-07 21:29:49] INFO: Writing conf to disk...
+# [2024-05-07 21:29:49] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002132500
+# [2024-05-07 21:29:51] INFO: Calculated checksum: 8eb281c7
+# [2024-05-07 21:29:54] INFO: Calculated checksum: d0168abd
+# [2024-05-07 21:29:54] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002132500
+# [2024-05-07 21:29:55] INFO: Writing to disk took 5.0731 seconds
+# [2024-05-07 21:29:55] INFO: ======================================================================
+# [2024-05-07 21:29:55] INFO: Start sweeping...
+# [2024-05-07 21:35:03] INFO: It took 308.014 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:35:03] INFO: Plaquette = 0.65416
+# [2024-05-07 21:35:03] INFO: Polyakov loop = (-0.000107731,-0.00345559)
+# [2024-05-07 21:35:03] INFO: Writing conf to disk...
+# [2024-05-07 21:35:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002133000
+# [2024-05-07 21:35:04] INFO: Calculated checksum: 1dc1f097
+# [2024-05-07 21:35:08] INFO: Calculated checksum: c8057bf5
+# [2024-05-07 21:35:08] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002133000
+# [2024-05-07 21:35:08] INFO: Writing to disk took 5.73638 seconds
+# [2024-05-07 21:35:08] INFO: ======================================================================
+# [2024-05-07 21:35:08] INFO: Start sweeping...
+# [2024-05-07 21:40:16] INFO: It took 307.94 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:40:16] INFO: Plaquette = 0.654051
+# [2024-05-07 21:40:16] INFO: Polyakov loop = (-0.00163771,-0.00237203)
+# [2024-05-07 21:40:16] INFO: Writing conf to disk...
+# [2024-05-07 21:40:16] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002133500
+# [2024-05-07 21:40:18] INFO: Calculated checksum: bf83ca6e
+# [2024-05-07 21:40:21] INFO: Calculated checksum: 581f2151
+# [2024-05-07 21:40:21] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002133500
+# [2024-05-07 21:40:21] INFO: Writing to disk took 4.93037 seconds
+# [2024-05-07 21:40:21] INFO: ======================================================================
+# [2024-05-07 21:40:21] INFO: Start sweeping...
+# [2024-05-07 21:45:29] INFO: It took 308.019 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:45:29] INFO: Plaquette = 0.654216
+# [2024-05-07 21:45:29] INFO: Polyakov loop = (-0.00294633,-0.00299376)
+# [2024-05-07 21:45:29] INFO: Writing conf to disk...
+# [2024-05-07 21:45:29] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002134000
+# [2024-05-07 21:45:31] INFO: Calculated checksum: 59ec7762
+# [2024-05-07 21:45:34] INFO: Calculated checksum: e79ad30d
+# [2024-05-07 21:45:34] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002134000
+# [2024-05-07 21:45:34] INFO: Writing to disk took 4.97896 seconds
+# [2024-05-07 21:45:34] INFO: ======================================================================
+# [2024-05-07 21:45:34] INFO: Start sweeping...
+# [2024-05-07 21:50:42] INFO: It took 308.02 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:50:42] INFO: Plaquette = 0.654121
+# [2024-05-07 21:50:42] INFO: Polyakov loop = (-0.00171277,-0.00363081)
+# [2024-05-07 21:50:42] INFO: Writing conf to disk...
+# [2024-05-07 21:50:42] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002134500
+# [2024-05-07 21:50:44] INFO: Calculated checksum: a428c805
+# [2024-05-07 21:50:48] INFO: Calculated checksum: 1f8e2b8c
+# [2024-05-07 21:50:48] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002134500
+# [2024-05-07 21:50:48] INFO: Writing to disk took 5.49616 seconds
+# [2024-05-07 21:50:48] INFO: ======================================================================
+# [2024-05-07 21:50:48] INFO: Start sweeping...
+# [2024-05-07 21:55:56] INFO: It took 307.89 seconds to do 500 HBOR sweeps.
+# [2024-05-07 21:55:56] INFO: Plaquette = 0.654212
+# [2024-05-07 21:55:56] INFO: Polyakov loop = (-0.00135271,-0.00386088)
+# [2024-05-07 21:55:56] INFO: Writing conf to disk...
+# [2024-05-07 21:55:56] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002135000
+# [2024-05-07 21:55:58] INFO: Calculated checksum: 58cdfed6
+# [2024-05-07 21:56:01] INFO: Calculated checksum: 3043aa78
+# [2024-05-07 21:56:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002135000
+# [2024-05-07 21:56:01] INFO: Writing to disk took 5.02654 seconds
+# [2024-05-07 21:56:01] INFO: ======================================================================
+# [2024-05-07 21:56:01] INFO: Start sweeping...
+# [2024-05-07 22:01:09] INFO: It took 308.574 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:01:09] INFO: Plaquette = 0.654197
+# [2024-05-07 22:01:09] INFO: Polyakov loop = (-0.00118763,-0.00341418)
+# [2024-05-07 22:01:09] INFO: Writing conf to disk...
+# [2024-05-07 22:01:09] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002135500
+# [2024-05-07 22:01:11] INFO: Calculated checksum: 719c31e4
+# [2024-05-07 22:01:16] INFO: Calculated checksum: 218c4f5a
+# [2024-05-07 22:01:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002135500
+# [2024-05-07 22:01:16] INFO: Writing to disk took 6.37335 seconds
+# [2024-05-07 22:01:16] INFO: ======================================================================
+# [2024-05-07 22:01:16] INFO: Start sweeping...
+# [2024-05-07 22:06:24] INFO: It took 307.907 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:06:24] INFO: Plaquette = 0.654176
+# [2024-05-07 22:06:24] INFO: Polyakov loop = (-0.00209807,-0.00413319)
+# [2024-05-07 22:06:24] INFO: Writing conf to disk...
+# [2024-05-07 22:06:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002136000
+# [2024-05-07 22:06:26] INFO: Calculated checksum: 65f9676a
+# [2024-05-07 22:06:29] INFO: Calculated checksum: f729fc6f
+# [2024-05-07 22:06:29] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002136000
+# [2024-05-07 22:06:29] INFO: Writing to disk took 5.17293 seconds
+# [2024-05-07 22:06:29] INFO: ======================================================================
+# [2024-05-07 22:06:29] INFO: Start sweeping...
+# [2024-05-07 22:11:37] INFO: It took 308.004 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:11:37] INFO: Plaquette = 0.653999
+# [2024-05-07 22:11:37] INFO: Polyakov loop = (-0.00227314,-0.00268149)
+# [2024-05-07 22:11:37] INFO: Writing conf to disk...
+# [2024-05-07 22:11:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002136500
+# [2024-05-07 22:11:39] INFO: Calculated checksum: bbe5461b
+# [2024-05-07 22:11:42] INFO: Calculated checksum: a1e0a980
+# [2024-05-07 22:11:42] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002136500
+# [2024-05-07 22:11:42] INFO: Writing to disk took 5.04823 seconds
+# [2024-05-07 22:11:42] INFO: ======================================================================
+# [2024-05-07 22:11:42] INFO: Start sweeping...
+# [2024-05-07 22:16:50] INFO: It took 307.919 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:16:50] INFO: Plaquette = 0.654336
+# [2024-05-07 22:16:50] INFO: Polyakov loop = (-0.00041739,-0.00241155)
+# [2024-05-07 22:16:50] INFO: Writing conf to disk...
+# [2024-05-07 22:16:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002137000
+# [2024-05-07 22:16:52] INFO: Calculated checksum: 75d72d23
+# [2024-05-07 22:16:55] INFO: Calculated checksum: c87f567
+# [2024-05-07 22:16:55] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002137000
+# [2024-05-07 22:16:55] INFO: Writing to disk took 5.11243 seconds
+# [2024-05-07 22:16:55] INFO: ======================================================================
+# [2024-05-07 22:16:55] INFO: Start sweeping...
+# [2024-05-07 22:22:03] INFO: It took 308.021 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:22:03] INFO: Plaquette = 0.65413
+# [2024-05-07 22:22:03] INFO: Polyakov loop = (-0.00204582,-0.00311041)
+# [2024-05-07 22:22:03] INFO: Writing conf to disk...
+# [2024-05-07 22:22:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002137500
+# [2024-05-07 22:22:05] INFO: Calculated checksum: a401cb90
+# [2024-05-07 22:22:08] INFO: Calculated checksum: 4e7f6a92
+# [2024-05-07 22:22:08] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002137500
+# [2024-05-07 22:22:08] INFO: Writing to disk took 5.09855 seconds
+# [2024-05-07 22:22:08] INFO: ======================================================================
+# [2024-05-07 22:22:08] INFO: Start sweeping...
+# [2024-05-07 22:27:16] INFO: It took 308.139 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:27:16] INFO: Plaquette = 0.654076
+# [2024-05-07 22:27:16] INFO: Polyakov loop = (-0.00219926,-0.00340268)
+# [2024-05-07 22:27:16] INFO: Writing conf to disk...
+# [2024-05-07 22:27:16] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002138000
+# [2024-05-07 22:27:18] INFO: Calculated checksum: 62bffbb5
+# [2024-05-07 22:27:21] INFO: Calculated checksum: 7fd02500
+# [2024-05-07 22:27:21] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002138000
+# [2024-05-07 22:27:21] INFO: Writing to disk took 4.97378 seconds
+# [2024-05-07 22:27:21] INFO: ======================================================================
+# [2024-05-07 22:27:21] INFO: Start sweeping...
+# [2024-05-07 22:32:30] INFO: It took 308.587 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:32:30] INFO: Plaquette = 0.654084
+# [2024-05-07 22:32:30] INFO: Polyakov loop = (-0.00154378,-0.00273737)
+# [2024-05-07 22:32:30] INFO: Writing conf to disk...
+# [2024-05-07 22:32:30] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002138500
+# [2024-05-07 22:32:32] INFO: Calculated checksum: 4dd442a9
+# [2024-05-07 22:32:35] INFO: Calculated checksum: 38e867a5
+# [2024-05-07 22:32:35] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002138500
+# [2024-05-07 22:32:35] INFO: Writing to disk took 4.9529 seconds
+# [2024-05-07 22:32:35] INFO: ======================================================================
+# [2024-05-07 22:32:35] INFO: Start sweeping...
+# [2024-05-07 22:37:43] INFO: It took 308.113 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:37:43] INFO: Plaquette = 0.654298
+# [2024-05-07 22:37:43] INFO: Polyakov loop = (-0.0023692,-0.00383908)
+# [2024-05-07 22:37:43] INFO: Writing conf to disk...
+# [2024-05-07 22:37:43] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002139000
+# [2024-05-07 22:37:45] INFO: Calculated checksum: 1898598c
+# [2024-05-07 22:37:48] INFO: Calculated checksum: 63546bba
+# [2024-05-07 22:37:48] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002139000
+# [2024-05-07 22:37:48] INFO: Writing to disk took 5.05381 seconds
+# [2024-05-07 22:37:48] INFO: ======================================================================
+# [2024-05-07 22:37:48] INFO: Start sweeping...
+# [2024-05-07 22:42:56] INFO: It took 308.062 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:42:56] INFO: Plaquette = 0.654226
+# [2024-05-07 22:42:56] INFO: Polyakov loop = (-0.00119478,-0.0036548)
+# [2024-05-07 22:42:56] INFO: Writing conf to disk...
+# [2024-05-07 22:42:56] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002139500
+# [2024-05-07 22:42:58] INFO: Calculated checksum: 4b64f36e
+# [2024-05-07 22:43:01] INFO: Calculated checksum: c9e0bac9
+# [2024-05-07 22:43:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002139500
+# [2024-05-07 22:43:01] INFO: Writing to disk took 5.18639 seconds
+# [2024-05-07 22:43:01] INFO: ======================================================================
+# [2024-05-07 22:43:01] INFO: Start sweeping...
+# [2024-05-07 22:48:09] INFO: It took 308.042 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:48:09] INFO: Plaquette = 0.654219
+# [2024-05-07 22:48:09] INFO: Polyakov loop = (-0.0028506,-0.00270203)
+# [2024-05-07 22:48:09] INFO: Writing conf to disk...
+# [2024-05-07 22:48:09] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002140000
+# [2024-05-07 22:48:11] INFO: Calculated checksum: 2be4712b
+# [2024-05-07 22:48:15] INFO: Calculated checksum: 1251e203
+# [2024-05-07 22:48:15] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002140000
+# [2024-05-07 22:48:15] INFO: Writing to disk took 5.23652 seconds
+# [2024-05-07 22:48:15] INFO: ======================================================================
+# [2024-05-07 22:48:15] INFO: Start sweeping...
+# [2024-05-07 22:53:23] INFO: It took 308.128 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:53:23] INFO: Plaquette = 0.654224
+# [2024-05-07 22:53:23] INFO: Polyakov loop = (-0.00266895,-0.00350614)
+# [2024-05-07 22:53:23] INFO: Writing conf to disk...
+# [2024-05-07 22:53:23] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002140500
+# [2024-05-07 22:53:25] INFO: Calculated checksum: 62bd1a45
+# [2024-05-07 22:53:28] INFO: Calculated checksum: 484307d
+# [2024-05-07 22:53:28] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002140500
+# [2024-05-07 22:53:28] INFO: Writing to disk took 5.06145 seconds
+# [2024-05-07 22:53:28] INFO: ======================================================================
+# [2024-05-07 22:53:28] INFO: Start sweeping...
+# [2024-05-07 22:58:37] INFO: It took 308.616 seconds to do 500 HBOR sweeps.
+# [2024-05-07 22:58:37] INFO: Plaquette = 0.654153
+# [2024-05-07 22:58:37] INFO: Polyakov loop = (-0.00163969,-0.00421658)
+# [2024-05-07 22:58:37] INFO: Writing conf to disk...
+# [2024-05-07 22:58:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002141000
+# [2024-05-07 22:58:38] INFO: Calculated checksum: 2aa923f0
+# [2024-05-07 22:58:41] INFO: Calculated checksum: 81b4ec9e
+# [2024-05-07 22:58:41] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002141000
+# [2024-05-07 22:58:42] INFO: Writing to disk took 4.97655 seconds
+# [2024-05-07 22:58:42] INFO: ======================================================================
+# [2024-05-07 22:58:42] INFO: Start sweeping...
+# [2024-05-07 23:03:50] INFO: It took 308.156 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:03:50] INFO: Plaquette = 0.654159
+# [2024-05-07 23:03:50] INFO: Polyakov loop = (-0.00113792,-0.00446454)
+# [2024-05-07 23:03:50] INFO: Writing conf to disk...
+# [2024-05-07 23:03:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002141500
+# [2024-05-07 23:03:52] INFO: Calculated checksum: b8971d44
+# [2024-05-07 23:03:55] INFO: Calculated checksum: 3414dfc6
+# [2024-05-07 23:03:55] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002141500
+# [2024-05-07 23:03:55] INFO: Writing to disk took 5.17368 seconds
+# [2024-05-07 23:03:55] INFO: ======================================================================
+# [2024-05-07 23:03:55] INFO: Start sweeping...
+# [2024-05-07 23:09:03] INFO: It took 308.034 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:09:03] INFO: Plaquette = 0.654087
+# [2024-05-07 23:09:03] INFO: Polyakov loop = (-0.00162896,-0.00389422)
+# [2024-05-07 23:09:03] INFO: Writing conf to disk...
+# [2024-05-07 23:09:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002142000
+# [2024-05-07 23:09:05] INFO: Calculated checksum: 8fad252b
+# [2024-05-07 23:09:08] INFO: Calculated checksum: d311df82
+# [2024-05-07 23:09:08] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002142000
+# [2024-05-07 23:09:08] INFO: Writing to disk took 5.00478 seconds
+# [2024-05-07 23:09:08] INFO: ======================================================================
+# [2024-05-07 23:09:08] INFO: Start sweeping...
+# [2024-05-07 23:14:17] INFO: It took 308.589 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:14:17] INFO: Plaquette = 0.654198
+# [2024-05-07 23:14:17] INFO: Polyakov loop = (-0.00206139,-0.00345828)
+# [2024-05-07 23:14:17] INFO: Writing conf to disk...
+# [2024-05-07 23:14:17] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002142500
+# [2024-05-07 23:14:18] INFO: Calculated checksum: 4de6f78d
+# [2024-05-07 23:14:22] INFO: Calculated checksum: 848e917d
+# [2024-05-07 23:14:22] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002142500
+# [2024-05-07 23:14:22] INFO: Writing to disk took 5.03697 seconds
+# [2024-05-07 23:14:22] INFO: ======================================================================
+# [2024-05-07 23:14:22] INFO: Start sweeping...
+# [2024-05-07 23:19:30] INFO: It took 307.985 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:19:30] INFO: Plaquette = 0.65417
+# [2024-05-07 23:19:30] INFO: Polyakov loop = (-0.000479394,-0.00256281)
+# [2024-05-07 23:19:30] INFO: Writing conf to disk...
+# [2024-05-07 23:19:30] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002143000
+# [2024-05-07 23:19:32] INFO: Calculated checksum: 222da93d
+# [2024-05-07 23:19:35] INFO: Calculated checksum: 921c7ec0
+# [2024-05-07 23:19:35] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002143000
+# [2024-05-07 23:19:35] INFO: Writing to disk took 5.12846 seconds
+# [2024-05-07 23:19:35] INFO: ======================================================================
+# [2024-05-07 23:19:35] INFO: Start sweeping...
+# [2024-05-07 23:24:43] INFO: It took 307.868 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:24:43] INFO: Plaquette = 0.654086
+# [2024-05-07 23:24:43] INFO: Polyakov loop = (-0.00127323,-0.00278997)
+# [2024-05-07 23:24:43] INFO: Writing conf to disk...
+# [2024-05-07 23:24:43] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002143500
+# [2024-05-07 23:24:45] INFO: Calculated checksum: 83e814e3
+# [2024-05-07 23:24:48] INFO: Calculated checksum: 5aa01e8d
+# [2024-05-07 23:24:48] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002143500
+# [2024-05-07 23:24:48] INFO: Writing to disk took 5.23636 seconds
+# [2024-05-07 23:24:48] INFO: ======================================================================
+# [2024-05-07 23:24:48] INFO: Start sweeping...
+# [2024-05-07 23:29:56] INFO: It took 308.074 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:29:56] INFO: Plaquette = 0.654236
+# [2024-05-07 23:29:56] INFO: Polyakov loop = (-0.00104782,-0.00300068)
+# [2024-05-07 23:29:56] INFO: Writing conf to disk...
+# [2024-05-07 23:29:56] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002144000
+# [2024-05-07 23:29:58] INFO: Calculated checksum: a9acb09d
+# [2024-05-07 23:30:01] INFO: Calculated checksum: 590a96b1
+# [2024-05-07 23:30:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002144000
+# [2024-05-07 23:30:02] INFO: Writing to disk took 6.09397 seconds
+# [2024-05-07 23:30:02] INFO: ======================================================================
+# [2024-05-07 23:30:02] INFO: Start sweeping...
+# [2024-05-07 23:35:10] INFO: It took 308.159 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:35:10] INFO: Plaquette = 0.654219
+# [2024-05-07 23:35:10] INFO: Polyakov loop = (-0.00135154,-0.00223405)
+# [2024-05-07 23:35:10] INFO: Writing conf to disk...
+# [2024-05-07 23:35:10] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002144500
+# [2024-05-07 23:35:12] INFO: Calculated checksum: 27feb4f4
+# [2024-05-07 23:35:15] INFO: Calculated checksum: 8a117480
+# [2024-05-07 23:35:15] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002144500
+# [2024-05-07 23:35:15] INFO: Writing to disk took 5.03386 seconds
+# [2024-05-07 23:35:15] INFO: ======================================================================
+# [2024-05-07 23:35:15] INFO: Start sweeping...
+# [2024-05-07 23:40:23] INFO: It took 308.088 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:40:24] INFO: Plaquette = 0.654024
+# [2024-05-07 23:40:24] INFO: Polyakov loop = (-0.00225542,-0.00222133)
+# [2024-05-07 23:40:24] INFO: Writing conf to disk...
+# [2024-05-07 23:40:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002145000
+# [2024-05-07 23:40:26] INFO: Calculated checksum: 2f8c6f69
+# [2024-05-07 23:40:29] INFO: Calculated checksum: f82c5bcd
+# [2024-05-07 23:40:29] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002145000
+# [2024-05-07 23:40:29] INFO: Writing to disk took 5.28572 seconds
+# [2024-05-07 23:40:29] INFO: ======================================================================
+# [2024-05-07 23:40:29] INFO: Start sweeping...
+# [2024-05-07 23:45:37] INFO: It took 308.149 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:45:37] INFO: Plaquette = 0.654225
+# [2024-05-07 23:45:37] INFO: Polyakov loop = (-0.00176727,-0.0028574)
+# [2024-05-07 23:45:37] INFO: Writing conf to disk...
+# [2024-05-07 23:45:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002145500
+# [2024-05-07 23:45:39] INFO: Calculated checksum: 7da2175c
+# [2024-05-07 23:45:43] INFO: Calculated checksum: d3a1ec66
+# [2024-05-07 23:45:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002145500
+# [2024-05-07 23:45:43] INFO: Writing to disk took 6.34527 seconds
+# [2024-05-07 23:45:43] INFO: ======================================================================
+# [2024-05-07 23:45:43] INFO: Start sweeping...
+# [2024-05-07 23:50:52] INFO: It took 308.185 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:50:52] INFO: Plaquette = 0.654154
+# [2024-05-07 23:50:52] INFO: Polyakov loop = (-0.00143296,-0.00223221)
+# [2024-05-07 23:50:52] INFO: Writing conf to disk...
+# [2024-05-07 23:50:52] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002146000
+# [2024-05-07 23:50:54] INFO: Calculated checksum: 4d23826e
+# [2024-05-07 23:50:57] INFO: Calculated checksum: 499e2e7e
+# [2024-05-07 23:50:57] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002146000
+# [2024-05-07 23:50:57] INFO: Writing to disk took 5.0857 seconds
+# [2024-05-07 23:50:57] INFO: ======================================================================
+# [2024-05-07 23:50:57] INFO: Start sweeping...
+# [2024-05-07 23:56:05] INFO: It took 308.062 seconds to do 500 HBOR sweeps.
+# [2024-05-07 23:56:05] INFO: Plaquette = 0.654199
+# [2024-05-07 23:56:05] INFO: Polyakov loop = (-0.00162401,-0.00362944)
+# [2024-05-07 23:56:05] INFO: Writing conf to disk...
+# [2024-05-07 23:56:05] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002146500
+# [2024-05-07 23:56:07] INFO: Calculated checksum: 17a47e87
+# [2024-05-07 23:56:11] INFO: Calculated checksum: 440c0663
+# [2024-05-07 23:56:11] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002146500
+# [2024-05-07 23:56:11] INFO: Writing to disk took 5.93753 seconds
+# [2024-05-07 23:56:11] INFO: ======================================================================
+# [2024-05-07 23:56:11] INFO: Start sweeping...
+# [2024-05-08 00:01:19] INFO: It took 307.951 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:01:19] INFO: Plaquette = 0.654074
+# [2024-05-08 00:01:19] INFO: Polyakov loop = (-0.00150555,-0.00249627)
+# [2024-05-08 00:01:19] INFO: Writing conf to disk...
+# [2024-05-08 00:01:19] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002147000
+# [2024-05-08 00:01:21] INFO: Calculated checksum: 7d9fa095
+# [2024-05-08 00:01:24] INFO: Calculated checksum: 23c9caae
+# [2024-05-08 00:01:24] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002147000
+# [2024-05-08 00:01:24] INFO: Writing to disk took 4.93286 seconds
+# [2024-05-08 00:01:24] INFO: ======================================================================
+# [2024-05-08 00:01:24] INFO: Start sweeping...
+# [2024-05-08 00:06:32] INFO: It took 308.541 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:06:32] INFO: Plaquette = 0.654202
+# [2024-05-08 00:06:32] INFO: Polyakov loop = (-0.00159853,-0.00363489)
+# [2024-05-08 00:06:32] INFO: Writing conf to disk...
+# [2024-05-08 00:06:32] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002147500
+# [2024-05-08 00:06:34] INFO: Calculated checksum: f960023c
+# [2024-05-08 00:06:37] INFO: Calculated checksum: d5d8692f
+# [2024-05-08 00:06:37] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002147500
+# [2024-05-08 00:06:37] INFO: Writing to disk took 4.96822 seconds
+# [2024-05-08 00:06:37] INFO: ======================================================================
+# [2024-05-08 00:06:37] INFO: Start sweeping...
+# [2024-05-08 00:11:45] INFO: It took 307.983 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:11:45] INFO: Plaquette = 0.654152
+# [2024-05-08 00:11:45] INFO: Polyakov loop = (-0.0012327,-0.00240187)
+# [2024-05-08 00:11:45] INFO: Writing conf to disk...
+# [2024-05-08 00:11:45] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002148000
+# [2024-05-08 00:11:47] INFO: Calculated checksum: 49c41aa4
+# [2024-05-08 00:11:50] INFO: Calculated checksum: fb7b8ec6
+# [2024-05-08 00:11:50] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002148000
+# [2024-05-08 00:11:50] INFO: Writing to disk took 4.99723 seconds
+# [2024-05-08 00:11:50] INFO: ======================================================================
+# [2024-05-08 00:11:50] INFO: Start sweeping...
+# [2024-05-08 00:16:59] INFO: It took 308.559 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:16:59] INFO: Plaquette = 0.654237
+# [2024-05-08 00:16:59] INFO: Polyakov loop = (-0.000908506,-0.00231111)
+# [2024-05-08 00:16:59] INFO: Writing conf to disk...
+# [2024-05-08 00:16:59] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002148500
+# [2024-05-08 00:17:01] INFO: Calculated checksum: b82496ec
+# [2024-05-08 00:17:04] INFO: Calculated checksum: f688e6d6
+# [2024-05-08 00:17:04] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002148500
+# [2024-05-08 00:17:04] INFO: Writing to disk took 4.91326 seconds
+# [2024-05-08 00:17:04] INFO: ======================================================================
+# [2024-05-08 00:17:04] INFO: Start sweeping...
+# [2024-05-08 00:22:12] INFO: It took 308.016 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:22:12] INFO: Plaquette = 0.65427
+# [2024-05-08 00:22:12] INFO: Polyakov loop = (-0.00252225,-0.00325974)
+# [2024-05-08 00:22:12] INFO: Writing conf to disk...
+# [2024-05-08 00:22:12] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002149000
+# [2024-05-08 00:22:14] INFO: Calculated checksum: 52018d7b
+# [2024-05-08 00:22:17] INFO: Calculated checksum: 875dae11
+# [2024-05-08 00:22:17] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002149000
+# [2024-05-08 00:22:17] INFO: Writing to disk took 4.98438 seconds
+# [2024-05-08 00:22:17] INFO: ======================================================================
+# [2024-05-08 00:22:17] INFO: Start sweeping...
+# [2024-05-08 00:27:25] INFO: It took 308.455 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:27:25] INFO: Plaquette = 0.6542
+# [2024-05-08 00:27:25] INFO: Polyakov loop = (-0.00267402,-0.00322381)
+# [2024-05-08 00:27:25] INFO: Writing conf to disk...
+# [2024-05-08 00:27:25] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002149500
+# [2024-05-08 00:27:27] INFO: Calculated checksum: cf2727ad
+# [2024-05-08 00:27:30] INFO: Calculated checksum: 3d433e2d
+# [2024-05-08 00:27:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002149500
+# [2024-05-08 00:27:30] INFO: Writing to disk took 5.06205 seconds
+# [2024-05-08 00:27:30] INFO: ======================================================================
+# [2024-05-08 00:27:30] INFO: Start sweeping...
+# [2024-05-08 00:32:38] INFO: It took 307.937 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:32:38] INFO: Plaquette = 0.654113
+# [2024-05-08 00:32:38] INFO: Polyakov loop = (-0.00161687,-0.00297158)
+# [2024-05-08 00:32:38] INFO: Writing conf to disk...
+# [2024-05-08 00:32:38] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002150000
+# [2024-05-08 00:32:40] INFO: Calculated checksum: 234d93ef
+# [2024-05-08 00:32:43] INFO: Calculated checksum: 4c3a6fc2
+# [2024-05-08 00:32:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002150000
+# [2024-05-08 00:32:43] INFO: Writing to disk took 4.9983 seconds
+# [2024-05-08 00:32:43] INFO: ======================================================================
+# [2024-05-08 00:32:43] INFO: Start sweeping...
+# [2024-05-08 00:37:52] INFO: It took 308.548 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:37:52] INFO: Plaquette = 0.654122
+# [2024-05-08 00:37:52] INFO: Polyakov loop = (-0.0014131,-0.00285946)
+# [2024-05-08 00:37:52] INFO: Writing conf to disk...
+# [2024-05-08 00:37:52] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002150500
+# [2024-05-08 00:37:54] INFO: Calculated checksum: 7713c99e
+# [2024-05-08 00:37:57] INFO: Calculated checksum: 31bd033f
+# [2024-05-08 00:37:57] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002150500
+# [2024-05-08 00:37:57] INFO: Writing to disk took 5.033 seconds
+# [2024-05-08 00:37:57] INFO: ======================================================================
+# [2024-05-08 00:37:57] INFO: Start sweeping...
+# [2024-05-08 00:43:05] INFO: It took 308.018 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:43:05] INFO: Plaquette = 0.654171
+# [2024-05-08 00:43:05] INFO: Polyakov loop = (-0.0012963,-0.00344695)
+# [2024-05-08 00:43:05] INFO: Writing conf to disk...
+# [2024-05-08 00:43:05] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002151000
+# [2024-05-08 00:43:07] INFO: Calculated checksum: 80e2b457
+# [2024-05-08 00:43:10] INFO: Calculated checksum: 44001cb4
+# [2024-05-08 00:43:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002151000
+# [2024-05-08 00:43:10] INFO: Writing to disk took 5.06685 seconds
+# [2024-05-08 00:43:10] INFO: ======================================================================
+# [2024-05-08 00:43:10] INFO: Start sweeping...
+# [2024-05-08 00:48:18] INFO: It took 308.433 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:48:19] INFO: Plaquette = 0.654067
+# [2024-05-08 00:48:19] INFO: Polyakov loop = (-0.000777647,-0.00304985)
+# [2024-05-08 00:48:19] INFO: Writing conf to disk...
+# [2024-05-08 00:48:19] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002151500
+# [2024-05-08 00:48:20] INFO: Calculated checksum: 937908f9
+# [2024-05-08 00:48:24] INFO: Calculated checksum: 4ba35c8a
+# [2024-05-08 00:48:24] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002151500
+# [2024-05-08 00:48:24] INFO: Writing to disk took 5.25237 seconds
+# [2024-05-08 00:48:24] INFO: ======================================================================
+# [2024-05-08 00:48:24] INFO: Start sweeping...
+# [2024-05-08 00:53:32] INFO: It took 307.908 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:53:32] INFO: Plaquette = 0.654135
+# [2024-05-08 00:53:32] INFO: Polyakov loop = (-0.00211782,-0.0037441)
+# [2024-05-08 00:53:32] INFO: Writing conf to disk...
+# [2024-05-08 00:53:32] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002152000
+# [2024-05-08 00:53:34] INFO: Calculated checksum: 486789be
+# [2024-05-08 00:53:37] INFO: Calculated checksum: 5c294035
+# [2024-05-08 00:53:37] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002152000
+# [2024-05-08 00:53:37] INFO: Writing to disk took 4.99081 seconds
+# [2024-05-08 00:53:37] INFO: ======================================================================
+# [2024-05-08 00:53:37] INFO: Start sweeping...
+# [2024-05-08 00:58:45] INFO: It took 308.022 seconds to do 500 HBOR sweeps.
+# [2024-05-08 00:58:45] INFO: Plaquette = 0.654108
+# [2024-05-08 00:58:45] INFO: Polyakov loop = (-0.00103377,-0.0027602)
+# [2024-05-08 00:58:45] INFO: Writing conf to disk...
+# [2024-05-08 00:58:45] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002152500
+# [2024-05-08 00:58:47] INFO: Calculated checksum: 61942ae4
+# [2024-05-08 00:58:50] INFO: Calculated checksum: 62fa0c6
+# [2024-05-08 00:58:50] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002152500
+# [2024-05-08 00:58:50] INFO: Writing to disk took 5.06251 seconds
+# [2024-05-08 00:58:50] INFO: ======================================================================
+# [2024-05-08 00:58:50] INFO: Start sweeping...
+# [2024-05-08 01:03:58] INFO: It took 308.004 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:03:58] INFO: Plaquette = 0.654094
+# [2024-05-08 01:03:58] INFO: Polyakov loop = (-0.000889752,-0.00413278)
+# [2024-05-08 01:03:58] INFO: Writing conf to disk...
+# [2024-05-08 01:03:58] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002153000
+# [2024-05-08 01:04:00] INFO: Calculated checksum: d44c2612
+# [2024-05-08 01:04:03] INFO: Calculated checksum: c3ccfbc0
+# [2024-05-08 01:04:03] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002153000
+# [2024-05-08 01:04:03] INFO: Writing to disk took 4.93493 seconds
+# [2024-05-08 01:04:03] INFO: ======================================================================
+# [2024-05-08 01:04:03] INFO: Start sweeping...
+# [2024-05-08 01:09:11] INFO: It took 307.921 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:09:11] INFO: Plaquette = 0.654168
+# [2024-05-08 01:09:11] INFO: Polyakov loop = (-0.00190522,-0.00236384)
+# [2024-05-08 01:09:11] INFO: Writing conf to disk...
+# [2024-05-08 01:09:11] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002153500
+# [2024-05-08 01:09:13] INFO: Calculated checksum: af97af6e
+# [2024-05-08 01:09:16] INFO: Calculated checksum: 8ade0b99
+# [2024-05-08 01:09:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002153500
+# [2024-05-08 01:09:16] INFO: Writing to disk took 4.9381 seconds
+# [2024-05-08 01:09:16] INFO: ======================================================================
+# [2024-05-08 01:09:16] INFO: Start sweeping...
+# [2024-05-08 01:14:24] INFO: It took 307.999 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:14:24] INFO: Plaquette = 0.654072
+# [2024-05-08 01:14:24] INFO: Polyakov loop = (-0.00138015,-0.00259)
+# [2024-05-08 01:14:24] INFO: Writing conf to disk...
+# [2024-05-08 01:14:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002154000
+# [2024-05-08 01:14:26] INFO: Calculated checksum: 21c88190
+# [2024-05-08 01:14:29] INFO: Calculated checksum: 23caa76a
+# [2024-05-08 01:14:29] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002154000
+# [2024-05-08 01:14:29] INFO: Writing to disk took 5.03659 seconds
+# [2024-05-08 01:14:29] INFO: ======================================================================
+# [2024-05-08 01:14:29] INFO: Start sweeping...
+# [2024-05-08 01:19:37] INFO: It took 307.924 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:19:37] INFO: Plaquette = 0.654175
+# [2024-05-08 01:19:37] INFO: Polyakov loop = (-0.00270655,-0.00284685)
+# [2024-05-08 01:19:37] INFO: Writing conf to disk...
+# [2024-05-08 01:19:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002154500
+# [2024-05-08 01:19:39] INFO: Calculated checksum: bca0470
+# [2024-05-08 01:19:42] INFO: Calculated checksum: 3a097595
+# [2024-05-08 01:19:42] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002154500
+# [2024-05-08 01:19:42] INFO: Writing to disk took 4.98743 seconds
+# [2024-05-08 01:19:42] INFO: ======================================================================
+# [2024-05-08 01:19:42] INFO: Start sweeping...
+# [2024-05-08 01:24:50] INFO: It took 308.021 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:24:50] INFO: Plaquette = 0.654249
+# [2024-05-08 01:24:50] INFO: Polyakov loop = (-0.00227541,-0.00286363)
+# [2024-05-08 01:24:50] INFO: Writing conf to disk...
+# [2024-05-08 01:24:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002155000
+# [2024-05-08 01:24:52] INFO: Calculated checksum: a18da32c
+# [2024-05-08 01:24:55] INFO: Calculated checksum: b9612d9f
+# [2024-05-08 01:24:55] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002155000
+# [2024-05-08 01:24:55] INFO: Writing to disk took 4.94713 seconds
+# [2024-05-08 01:24:55] INFO: ======================================================================
+# [2024-05-08 01:24:55] INFO: Start sweeping...
+# [2024-05-08 01:30:03] INFO: It took 308.038 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:30:03] INFO: Plaquette = 0.654244
+# [2024-05-08 01:30:03] INFO: Polyakov loop = (-0.00133675,-0.00270175)
+# [2024-05-08 01:30:03] INFO: Writing conf to disk...
+# [2024-05-08 01:30:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002155500
+# [2024-05-08 01:30:05] INFO: Calculated checksum: 29947161
+# [2024-05-08 01:30:10] INFO: Calculated checksum: 2b492943
+# [2024-05-08 01:30:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002155500
+# [2024-05-08 01:30:10] INFO: Writing to disk took 7.37137 seconds
+# [2024-05-08 01:30:10] INFO: ======================================================================
+# [2024-05-08 01:30:10] INFO: Start sweeping...
+# [2024-05-08 01:35:18] INFO: It took 307.759 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:35:18] INFO: Plaquette = 0.654078
+# [2024-05-08 01:35:18] INFO: Polyakov loop = (-0.0016621,-0.0020624)
+# [2024-05-08 01:35:18] INFO: Writing conf to disk...
+# [2024-05-08 01:35:18] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002156000
+# [2024-05-08 01:35:20] INFO: Calculated checksum: 9672a870
+# [2024-05-08 01:35:23] INFO: Calculated checksum: 2354d577
+# [2024-05-08 01:35:23] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002156000
+# [2024-05-08 01:35:23] INFO: Writing to disk took 4.94935 seconds
+# [2024-05-08 01:35:23] INFO: ======================================================================
+# [2024-05-08 01:35:23] INFO: Start sweeping...
+# [2024-05-08 01:40:31] INFO: It took 308.046 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:40:31] INFO: Plaquette = 0.654078
+# [2024-05-08 01:40:31] INFO: Polyakov loop = (-0.00129342,-0.00326749)
+# [2024-05-08 01:40:31] INFO: Writing conf to disk...
+# [2024-05-08 01:40:31] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002156500
+# [2024-05-08 01:40:33] INFO: Calculated checksum: 6252f36f
+# [2024-05-08 01:40:36] INFO: Calculated checksum: 1f2e23c2
+# [2024-05-08 01:40:36] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002156500
+# [2024-05-08 01:40:36] INFO: Writing to disk took 4.93307 seconds
+# [2024-05-08 01:40:36] INFO: ======================================================================
+# [2024-05-08 01:40:36] INFO: Start sweeping...
+# [2024-05-08 01:45:44] INFO: It took 308.041 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:45:44] INFO: Plaquette = 0.654105
+# [2024-05-08 01:45:44] INFO: Polyakov loop = (-0.00213093,-0.00369264)
+# [2024-05-08 01:45:44] INFO: Writing conf to disk...
+# [2024-05-08 01:45:44] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002157000
+# [2024-05-08 01:45:46] INFO: Calculated checksum: 6edcc328
+# [2024-05-08 01:45:50] INFO: Calculated checksum: 109d574
+# [2024-05-08 01:45:50] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002157000
+# [2024-05-08 01:45:50] INFO: Writing to disk took 5.81846 seconds
+# [2024-05-08 01:45:50] INFO: ======================================================================
+# [2024-05-08 01:45:50] INFO: Start sweeping...
+# [2024-05-08 01:50:58] INFO: It took 308.477 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:50:58] INFO: Plaquette = 0.654266
+# [2024-05-08 01:50:58] INFO: Polyakov loop = (-0.00108915,-0.0036722)
+# [2024-05-08 01:50:58] INFO: Writing conf to disk...
+# [2024-05-08 01:50:58] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002157500
+# [2024-05-08 01:51:00] INFO: Calculated checksum: 42746283
+# [2024-05-08 01:51:03] INFO: Calculated checksum: 56325d66
+# [2024-05-08 01:51:03] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002157500
+# [2024-05-08 01:51:03] INFO: Writing to disk took 4.92685 seconds
+# [2024-05-08 01:51:03] INFO: ======================================================================
+# [2024-05-08 01:51:03] INFO: Start sweeping...
+# [2024-05-08 01:56:11] INFO: It took 308.001 seconds to do 500 HBOR sweeps.
+# [2024-05-08 01:56:11] INFO: Plaquette = 0.654065
+# [2024-05-08 01:56:11] INFO: Polyakov loop = (-0.00143991,-0.00282062)
+# [2024-05-08 01:56:11] INFO: Writing conf to disk...
+# [2024-05-08 01:56:11] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002158000
+# [2024-05-08 01:56:13] INFO: Calculated checksum: 72cc0f97
+# [2024-05-08 01:56:16] INFO: Calculated checksum: 7345bba0
+# [2024-05-08 01:56:16] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002158000
+# [2024-05-08 01:56:16] INFO: Writing to disk took 4.6633 seconds
+# [2024-05-08 01:56:16] INFO: ======================================================================
+# [2024-05-08 01:56:16] INFO: Start sweeping...
+# [2024-05-08 02:01:24] INFO: It took 308.14 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:01:24] INFO: Plaquette = 0.654258
+# [2024-05-08 02:01:24] INFO: Polyakov loop = (-0.00124703,-0.00419996)
+# [2024-05-08 02:01:24] INFO: Writing conf to disk...
+# [2024-05-08 02:01:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002158500
+# [2024-05-08 02:01:26] INFO: Calculated checksum: cd4eab8c
+# [2024-05-08 02:01:29] INFO: Calculated checksum: 7d3e6ee4
+# [2024-05-08 02:01:29] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002158500
+# [2024-05-08 02:01:29] INFO: Writing to disk took 4.82026 seconds
+# [2024-05-08 02:01:29] INFO: ======================================================================
+# [2024-05-08 02:01:29] INFO: Start sweeping...
+# [2024-05-08 02:06:37] INFO: It took 307.927 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:06:37] INFO: Plaquette = 0.654263
+# [2024-05-08 02:06:37] INFO: Polyakov loop = (-0.00127629,-0.00284974)
+# [2024-05-08 02:06:37] INFO: Writing conf to disk...
+# [2024-05-08 02:06:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002159000
+# [2024-05-08 02:06:39] INFO: Calculated checksum: 55d91786
+# [2024-05-08 02:06:41] INFO: Calculated checksum: bbfea4de
+# [2024-05-08 02:06:41] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002159000
+# [2024-05-08 02:06:42] INFO: Writing to disk took 4.63657 seconds
+# [2024-05-08 02:06:42] INFO: ======================================================================
+# [2024-05-08 02:06:42] INFO: Start sweeping...
+# [2024-05-08 02:11:50] INFO: It took 308.075 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:11:50] INFO: Plaquette = 0.654328
+# [2024-05-08 02:11:50] INFO: Polyakov loop = (-0.00216768,-0.00325329)
+# [2024-05-08 02:11:50] INFO: Writing conf to disk...
+# [2024-05-08 02:11:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002159500
+# [2024-05-08 02:11:51] INFO: Calculated checksum: cbe07343
+# [2024-05-08 02:11:54] INFO: Calculated checksum: a263ed43
+# [2024-05-08 02:11:54] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002159500
+# [2024-05-08 02:11:54] INFO: Writing to disk took 4.88254 seconds
+# [2024-05-08 02:11:54] INFO: ======================================================================
+# [2024-05-08 02:11:54] INFO: Start sweeping...
+# [2024-05-08 02:17:03] INFO: It took 308.052 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:17:03] INFO: Plaquette = 0.654154
+# [2024-05-08 02:17:03] INFO: Polyakov loop = (-0.00143811,-0.00260449)
+# [2024-05-08 02:17:03] INFO: Writing conf to disk...
+# [2024-05-08 02:17:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002160000
+# [2024-05-08 02:17:05] INFO: Calculated checksum: a5682486
+# [2024-05-08 02:17:08] INFO: Calculated checksum: 2839b017
+# [2024-05-08 02:17:08] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002160000
+# [2024-05-08 02:17:08] INFO: Writing to disk took 5.01862 seconds
+# [2024-05-08 02:17:08] INFO: ======================================================================
+# [2024-05-08 02:17:08] INFO: Start sweeping...
+# [2024-05-08 02:22:16] INFO: It took 308.061 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:22:16] INFO: Plaquette = 0.654039
+# [2024-05-08 02:22:16] INFO: Polyakov loop = (-0.00109895,-0.0045512)
+# [2024-05-08 02:22:16] INFO: Writing conf to disk...
+# [2024-05-08 02:22:16] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002160500
+# [2024-05-08 02:22:18] INFO: Calculated checksum: 4f480bf8
+# [2024-05-08 02:22:21] INFO: Calculated checksum: 5ffeb05e
+# [2024-05-08 02:22:21] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002160500
+# [2024-05-08 02:22:21] INFO: Writing to disk took 4.91872 seconds
+# [2024-05-08 02:22:21] INFO: ======================================================================
+# [2024-05-08 02:22:21] INFO: Start sweeping...
+# [2024-05-08 02:27:29] INFO: It took 308.059 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:27:29] INFO: Plaquette = 0.654183
+# [2024-05-08 02:27:29] INFO: Polyakov loop = (-0.000778821,-0.00355359)
+# [2024-05-08 02:27:29] INFO: Writing conf to disk...
+# [2024-05-08 02:27:29] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002161000
+# [2024-05-08 02:27:31] INFO: Calculated checksum: 958e850
+# [2024-05-08 02:27:33] INFO: Calculated checksum: b0875fdc
+# [2024-05-08 02:27:33] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002161000
+# [2024-05-08 02:27:34] INFO: Writing to disk took 4.89459 seconds
+# [2024-05-08 02:27:34] INFO: ======================================================================
+# [2024-05-08 02:27:34] INFO: Start sweeping...
+# [2024-05-08 02:32:42] INFO: It took 308.059 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:32:42] INFO: Plaquette = 0.654232
+# [2024-05-08 02:32:42] INFO: Polyakov loop = (-0.0019051,-0.00321277)
+# [2024-05-08 02:32:42] INFO: Writing conf to disk...
+# [2024-05-08 02:32:42] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002161500
+# [2024-05-08 02:32:44] INFO: Calculated checksum: 9e234bc5
+# [2024-05-08 02:32:46] INFO: Calculated checksum: b843f1ea
+# [2024-05-08 02:32:46] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002161500
+# [2024-05-08 02:32:47] INFO: Writing to disk took 4.87157 seconds
+# [2024-05-08 02:32:47] INFO: ======================================================================
+# [2024-05-08 02:32:47] INFO: Start sweeping...
+# [2024-05-08 02:37:55] INFO: It took 308.037 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:37:55] INFO: Plaquette = 0.654156
+# [2024-05-08 02:37:55] INFO: Polyakov loop = (-0.00240434,-0.00350299)
+# [2024-05-08 02:37:55] INFO: Writing conf to disk...
+# [2024-05-08 02:37:55] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002162000
+# [2024-05-08 02:37:57] INFO: Calculated checksum: f1d321b6
+# [2024-05-08 02:37:59] INFO: Calculated checksum: 4b884f66
+# [2024-05-08 02:37:59] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002162000
+# [2024-05-08 02:38:00] INFO: Writing to disk took 4.92515 seconds
+# [2024-05-08 02:38:00] INFO: ======================================================================
+# [2024-05-08 02:38:00] INFO: Start sweeping...
+# [2024-05-08 02:43:08] INFO: It took 308.067 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:43:08] INFO: Plaquette = 0.654164
+# [2024-05-08 02:43:08] INFO: Polyakov loop = (-0.00160682,-0.00283873)
+# [2024-05-08 02:43:08] INFO: Writing conf to disk...
+# [2024-05-08 02:43:08] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002162500
+# [2024-05-08 02:43:10] INFO: Calculated checksum: 1ab514b5
+# [2024-05-08 02:43:13] INFO: Calculated checksum: 5d6f1c70
+# [2024-05-08 02:43:13] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002162500
+# [2024-05-08 02:43:13] INFO: Writing to disk took 4.94003 seconds
+# [2024-05-08 02:43:13] INFO: ======================================================================
+# [2024-05-08 02:43:13] INFO: Start sweeping...
+# [2024-05-08 02:48:21] INFO: It took 307.949 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:48:21] INFO: Plaquette = 0.654232
+# [2024-05-08 02:48:21] INFO: Polyakov loop = (-0.00087205,-0.00187253)
+# [2024-05-08 02:48:21] INFO: Writing conf to disk...
+# [2024-05-08 02:48:21] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002163000
+# [2024-05-08 02:48:22] INFO: Calculated checksum: e164c10e
+# [2024-05-08 02:48:26] INFO: Calculated checksum: d0bf7d49
+# [2024-05-08 02:48:26] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002163000
+# [2024-05-08 02:48:26] INFO: Writing to disk took 5.14101 seconds
+# [2024-05-08 02:48:26] INFO: ======================================================================
+# [2024-05-08 02:48:26] INFO: Start sweeping...
+# [2024-05-08 02:53:34] INFO: It took 307.887 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:53:34] INFO: Plaquette = 0.654105
+# [2024-05-08 02:53:34] INFO: Polyakov loop = (0.00010525,-0.00300674)
+# [2024-05-08 02:53:34] INFO: Writing conf to disk...
+# [2024-05-08 02:53:34] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002163500
+# [2024-05-08 02:53:36] INFO: Calculated checksum: 9ba24d55
+# [2024-05-08 02:53:39] INFO: Calculated checksum: 7064fe4
+# [2024-05-08 02:53:39] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002163500
+# [2024-05-08 02:53:39] INFO: Writing to disk took 5.06728 seconds
+# [2024-05-08 02:53:39] INFO: ======================================================================
+# [2024-05-08 02:53:39] INFO: Start sweeping...
+# [2024-05-08 02:58:47] INFO: It took 307.994 seconds to do 500 HBOR sweeps.
+# [2024-05-08 02:58:47] INFO: Plaquette = 0.654121
+# [2024-05-08 02:58:47] INFO: Polyakov loop = (-0.00103366,-0.00330954)
+# [2024-05-08 02:58:47] INFO: Writing conf to disk...
+# [2024-05-08 02:58:47] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002164000
+# [2024-05-08 02:58:49] INFO: Calculated checksum: b83a4f6d
+# [2024-05-08 02:58:52] INFO: Calculated checksum: 9c40ac73
+# [2024-05-08 02:58:52] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002164000
+# [2024-05-08 02:58:52] INFO: Writing to disk took 5.00545 seconds
+# [2024-05-08 02:58:52] INFO: ======================================================================
+# [2024-05-08 02:58:52] INFO: Start sweeping...
+# [2024-05-08 03:04:00] INFO: It took 308.019 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:04:00] INFO: Plaquette = 0.654123
+# [2024-05-08 03:04:00] INFO: Polyakov loop = (-0.002108,-0.00376568)
+# [2024-05-08 03:04:00] INFO: Writing conf to disk...
+# [2024-05-08 03:04:00] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002164500
+# [2024-05-08 03:04:02] INFO: Calculated checksum: ce813167
+# [2024-05-08 03:04:05] INFO: Calculated checksum: c6832a65
+# [2024-05-08 03:04:05] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002164500
+# [2024-05-08 03:04:05] INFO: Writing to disk took 5.06407 seconds
+# [2024-05-08 03:04:05] INFO: ======================================================================
+# [2024-05-08 03:04:05] INFO: Start sweeping...
+# [2024-05-08 03:09:13] INFO: It took 308.559 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:09:13] INFO: Plaquette = 0.654147
+# [2024-05-08 03:09:13] INFO: Polyakov loop = (-0.00165687,-0.00517057)
+# [2024-05-08 03:09:13] INFO: Writing conf to disk...
+# [2024-05-08 03:09:13] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002165000
+# [2024-05-08 03:09:15] INFO: Calculated checksum: dc80aae8
+# [2024-05-08 03:09:18] INFO: Calculated checksum: 9fa1fa6c
+# [2024-05-08 03:09:18] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002165000
+# [2024-05-08 03:09:18] INFO: Writing to disk took 4.91193 seconds
+# [2024-05-08 03:09:18] INFO: ======================================================================
+# [2024-05-08 03:09:18] INFO: Start sweeping...
+# [2024-05-08 03:14:26] INFO: It took 307.947 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:14:26] INFO: Plaquette = 0.65408
+# [2024-05-08 03:14:26] INFO: Polyakov loop = (-0.00131126,-0.00307844)
+# [2024-05-08 03:14:26] INFO: Writing conf to disk...
+# [2024-05-08 03:14:26] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002165500
+# [2024-05-08 03:14:28] INFO: Calculated checksum: 60c94e91
+# [2024-05-08 03:14:31] INFO: Calculated checksum: 5d742f03
+# [2024-05-08 03:14:31] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002165500
+# [2024-05-08 03:14:31] INFO: Writing to disk took 4.89537 seconds
+# [2024-05-08 03:14:31] INFO: ======================================================================
+# [2024-05-08 03:14:31] INFO: Start sweeping...
+# [2024-05-08 03:19:39] INFO: It took 307.998 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:19:39] INFO: Plaquette = 0.654127
+# [2024-05-08 03:19:39] INFO: Polyakov loop = (-0.00221779,-0.00317191)
+# [2024-05-08 03:19:39] INFO: Writing conf to disk...
+# [2024-05-08 03:19:39] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002166000
+# [2024-05-08 03:19:41] INFO: Calculated checksum: 69cfb791
+# [2024-05-08 03:19:44] INFO: Calculated checksum: 6d37956b
+# [2024-05-08 03:19:44] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002166000
+# [2024-05-08 03:19:44] INFO: Writing to disk took 5.1037 seconds
+# [2024-05-08 03:19:44] INFO: ======================================================================
+# [2024-05-08 03:19:44] INFO: Start sweeping...
+# [2024-05-08 03:24:53] INFO: It took 308.558 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:24:53] INFO: Plaquette = 0.654103
+# [2024-05-08 03:24:53] INFO: Polyakov loop = (-0.0024209,-0.00370929)
+# [2024-05-08 03:24:53] INFO: Writing conf to disk...
+# [2024-05-08 03:24:53] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002166500
+# [2024-05-08 03:24:55] INFO: Calculated checksum: 36c87aef
+# [2024-05-08 03:24:58] INFO: Calculated checksum: 3545931d
+# [2024-05-08 03:24:58] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002166500
+# [2024-05-08 03:24:58] INFO: Writing to disk took 4.93523 seconds
+# [2024-05-08 03:24:58] INFO: ======================================================================
+# [2024-05-08 03:24:58] INFO: Start sweeping...
+# [2024-05-08 03:30:06] INFO: It took 308.601 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:30:07] INFO: Plaquette = 0.654206
+# [2024-05-08 03:30:07] INFO: Polyakov loop = (-0.0012236,-0.00304153)
+# [2024-05-08 03:30:07] INFO: Writing conf to disk...
+# [2024-05-08 03:30:07] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002167000
+# [2024-05-08 03:30:08] INFO: Calculated checksum: d32676f
+# [2024-05-08 03:30:11] INFO: Calculated checksum: e835b588
+# [2024-05-08 03:30:11] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002167000
+# [2024-05-08 03:30:12] INFO: Writing to disk took 5.0064 seconds
+# [2024-05-08 03:30:12] INFO: ======================================================================
+# [2024-05-08 03:30:12] INFO: Start sweeping...
+# [2024-05-08 03:35:19] INFO: It took 307.935 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:35:19] INFO: Plaquette = 0.654099
+# [2024-05-08 03:35:19] INFO: Polyakov loop = (-0.00130529,-0.00184466)
+# [2024-05-08 03:35:19] INFO: Writing conf to disk...
+# [2024-05-08 03:35:19] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002167500
+# [2024-05-08 03:35:21] INFO: Calculated checksum: a3ba3e1a
+# [2024-05-08 03:35:24] INFO: Calculated checksum: 72f0f2d3
+# [2024-05-08 03:35:24] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002167500
+# [2024-05-08 03:35:24] INFO: Writing to disk took 4.92101 seconds
+# [2024-05-08 03:35:24] INFO: ======================================================================
+# [2024-05-08 03:35:24] INFO: Start sweeping...
+# [2024-05-08 03:40:32] INFO: It took 308.038 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:40:32] INFO: Plaquette = 0.654064
+# [2024-05-08 03:40:32] INFO: Polyakov loop = (-0.00148033,-0.00277464)
+# [2024-05-08 03:40:32] INFO: Writing conf to disk...
+# [2024-05-08 03:40:32] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002168000
+# [2024-05-08 03:40:34] INFO: Calculated checksum: a0b0a99b
+# [2024-05-08 03:40:38] INFO: Calculated checksum: 9e784425
+# [2024-05-08 03:40:38] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002168000
+# [2024-05-08 03:40:38] INFO: Writing to disk took 5.31025 seconds
+# [2024-05-08 03:40:38] INFO: ======================================================================
+# [2024-05-08 03:40:38] INFO: Start sweeping...
+# [2024-05-08 03:45:46] INFO: It took 308.011 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:45:46] INFO: Plaquette = 0.65414
+# [2024-05-08 03:45:46] INFO: Polyakov loop = (-0.00242619,-0.00347837)
+# [2024-05-08 03:45:46] INFO: Writing conf to disk...
+# [2024-05-08 03:45:46] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002168500
+# [2024-05-08 03:45:48] INFO: Calculated checksum: 3994d15d
+# [2024-05-08 03:45:51] INFO: Calculated checksum: 491ab50a
+# [2024-05-08 03:45:51] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002168500
+# [2024-05-08 03:45:51] INFO: Writing to disk took 4.88296 seconds
+# [2024-05-08 03:45:51] INFO: ======================================================================
+# [2024-05-08 03:45:51] INFO: Start sweeping...
+# [2024-05-08 03:50:59] INFO: It took 308.009 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:50:59] INFO: Plaquette = 0.654106
+# [2024-05-08 03:50:59] INFO: Polyakov loop = (-0.0012171,-0.00413184)
+# [2024-05-08 03:50:59] INFO: Writing conf to disk...
+# [2024-05-08 03:50:59] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002169000
+# [2024-05-08 03:51:01] INFO: Calculated checksum: 3ed54dcd
+# [2024-05-08 03:51:04] INFO: Calculated checksum: a8ea3b69
+# [2024-05-08 03:51:04] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002169000
+# [2024-05-08 03:51:04] INFO: Writing to disk took 4.88592 seconds
+# [2024-05-08 03:51:04] INFO: ======================================================================
+# [2024-05-08 03:51:04] INFO: Start sweeping...
+# [2024-05-08 03:56:12] INFO: It took 308.021 seconds to do 500 HBOR sweeps.
+# [2024-05-08 03:56:12] INFO: Plaquette = 0.654076
+# [2024-05-08 03:56:12] INFO: Polyakov loop = (-0.00143103,-0.00375146)
+# [2024-05-08 03:56:12] INFO: Writing conf to disk...
+# [2024-05-08 03:56:12] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002169500
+# [2024-05-08 03:56:14] INFO: Calculated checksum: 583d8c85
+# [2024-05-08 03:56:17] INFO: Calculated checksum: a44ca30b
+# [2024-05-08 03:56:17] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002169500
+# [2024-05-08 03:56:17] INFO: Writing to disk took 4.93648 seconds
+# [2024-05-08 03:56:17] INFO: ======================================================================
+# [2024-05-08 03:56:17] INFO: Start sweeping...
+# [2024-05-08 04:01:25] INFO: It took 308.008 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:01:25] INFO: Plaquette = 0.654308
+# [2024-05-08 04:01:25] INFO: Polyakov loop = (-0.00180646,-0.0027533)
+# [2024-05-08 04:01:25] INFO: Writing conf to disk...
+# [2024-05-08 04:01:25] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002170000
+# [2024-05-08 04:01:27] INFO: Calculated checksum: 7977e050
+# [2024-05-08 04:01:30] INFO: Calculated checksum: 654d8ddb
+# [2024-05-08 04:01:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002170000
+# [2024-05-08 04:01:30] INFO: Writing to disk took 4.91335 seconds
+# [2024-05-08 04:01:30] INFO: ======================================================================
+# [2024-05-08 04:01:30] INFO: Start sweeping...
+# [2024-05-08 04:06:38] INFO: It took 307.992 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:06:38] INFO: Plaquette = 0.654111
+# [2024-05-08 04:06:38] INFO: Polyakov loop = (-0.00265122,-0.00330963)
+# [2024-05-08 04:06:38] INFO: Writing conf to disk...
+# [2024-05-08 04:06:38] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002170500
+# [2024-05-08 04:06:39] INFO: Calculated checksum: b9bbf3eb
+# [2024-05-08 04:06:42] INFO: Calculated checksum: 210421fb
+# [2024-05-08 04:06:42] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002170500
+# [2024-05-08 04:06:43] INFO: Writing to disk took 4.9115 seconds
+# [2024-05-08 04:06:43] INFO: ======================================================================
+# [2024-05-08 04:06:43] INFO: Start sweeping...
+# [2024-05-08 04:11:51] INFO: It took 308 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:11:51] INFO: Plaquette = 0.654111
+# [2024-05-08 04:11:51] INFO: Polyakov loop = (-0.00228905,-0.0035886)
+# [2024-05-08 04:11:51] INFO: Writing conf to disk...
+# [2024-05-08 04:11:51] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002171000
+# [2024-05-08 04:11:52] INFO: Calculated checksum: 760c8553
+# [2024-05-08 04:11:55] INFO: Calculated checksum: e18a6b0b
+# [2024-05-08 04:11:55] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002171000
+# [2024-05-08 04:11:56] INFO: Writing to disk took 5.05432 seconds
+# [2024-05-08 04:11:56] INFO: ======================================================================
+# [2024-05-08 04:11:56] INFO: Start sweeping...
+# [2024-05-08 04:17:04] INFO: It took 308.006 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:17:04] INFO: Plaquette = 0.654054
+# [2024-05-08 04:17:04] INFO: Polyakov loop = (-0.00213506,-0.00318943)
+# [2024-05-08 04:17:04] INFO: Writing conf to disk...
+# [2024-05-08 04:17:04] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002171500
+# [2024-05-08 04:17:06] INFO: Calculated checksum: 12af41d8
+# [2024-05-08 04:17:08] INFO: Calculated checksum: 482f650b
+# [2024-05-08 04:17:08] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002171500
+# [2024-05-08 04:17:09] INFO: Writing to disk took 4.91739 seconds
+# [2024-05-08 04:17:09] INFO: ======================================================================
+# [2024-05-08 04:17:09] INFO: Start sweeping...
+# [2024-05-08 04:22:17] INFO: It took 307.92 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:22:17] INFO: Plaquette = 0.654167
+# [2024-05-08 04:22:17] INFO: Polyakov loop = (-0.00145542,-0.00250803)
+# [2024-05-08 04:22:17] INFO: Writing conf to disk...
+# [2024-05-08 04:22:17] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002172000
+# [2024-05-08 04:22:18] INFO: Calculated checksum: b1625d6c
+# [2024-05-08 04:22:22] INFO: Calculated checksum: d9c26df2
+# [2024-05-08 04:22:22] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002172000
+# [2024-05-08 04:22:22] INFO: Writing to disk took 5.11902 seconds
+# [2024-05-08 04:22:22] INFO: ======================================================================
+# [2024-05-08 04:22:22] INFO: Start sweeping...
+# [2024-05-08 04:27:30] INFO: It took 308.546 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:27:30] INFO: Plaquette = 0.654062
+# [2024-05-08 04:27:30] INFO: Polyakov loop = (-0.00133189,-0.00268581)
+# [2024-05-08 04:27:30] INFO: Writing conf to disk...
+# [2024-05-08 04:27:30] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002172500
+# [2024-05-08 04:27:32] INFO: Calculated checksum: 6dbc1551
+# [2024-05-08 04:27:35] INFO: Calculated checksum: 21350be
+# [2024-05-08 04:27:35] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002172500
+# [2024-05-08 04:27:35] INFO: Writing to disk took 4.94728 seconds
+# [2024-05-08 04:27:35] INFO: ======================================================================
+# [2024-05-08 04:27:35] INFO: Start sweeping...
+# [2024-05-08 04:32:44] INFO: It took 308.56 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:32:44] INFO: Plaquette = 0.654128
+# [2024-05-08 04:32:44] INFO: Polyakov loop = (-0.00173975,-0.00252335)
+# [2024-05-08 04:32:44] INFO: Writing conf to disk...
+# [2024-05-08 04:32:44] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002173000
+# [2024-05-08 04:32:46] INFO: Calculated checksum: fad56872
+# [2024-05-08 04:32:49] INFO: Calculated checksum: ff941e7b
+# [2024-05-08 04:32:49] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002173000
+# [2024-05-08 04:32:49] INFO: Writing to disk took 4.95043 seconds
+# [2024-05-08 04:32:49] INFO: ======================================================================
+# [2024-05-08 04:32:49] INFO: Start sweeping...
+# [2024-05-08 04:37:57] INFO: It took 307.911 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:37:57] INFO: Plaquette = 0.654269
+# [2024-05-08 04:37:57] INFO: Polyakov loop = (-0.00265859,-0.00420414)
+# [2024-05-08 04:37:57] INFO: Writing conf to disk...
+# [2024-05-08 04:37:57] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002173500
+# [2024-05-08 04:37:59] INFO: Calculated checksum: cd2f5b9c
+# [2024-05-08 04:38:01] INFO: Calculated checksum: ddc55a28
+# [2024-05-08 04:38:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002173500
+# [2024-05-08 04:38:02] INFO: Writing to disk took 4.94659 seconds
+# [2024-05-08 04:38:02] INFO: ======================================================================
+# [2024-05-08 04:38:02] INFO: Start sweeping...
+# [2024-05-08 04:43:10] INFO: It took 307.915 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:43:10] INFO: Plaquette = 0.654175
+# [2024-05-08 04:43:10] INFO: Polyakov loop = (-0.00192394,-0.00266637)
+# [2024-05-08 04:43:10] INFO: Writing conf to disk...
+# [2024-05-08 04:43:10] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002174000
+# [2024-05-08 04:43:11] INFO: Calculated checksum: 197fc372
+# [2024-05-08 04:43:14] INFO: Calculated checksum: 965bfb7b
+# [2024-05-08 04:43:14] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002174000
+# [2024-05-08 04:43:15] INFO: Writing to disk took 5.01312 seconds
+# [2024-05-08 04:43:15] INFO: ======================================================================
+# [2024-05-08 04:43:15] INFO: Start sweeping...
+# [2024-05-08 04:48:23] INFO: It took 307.966 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:48:23] INFO: Plaquette = 0.654115
+# [2024-05-08 04:48:23] INFO: Polyakov loop = (-0.00231613,-0.00419414)
+# [2024-05-08 04:48:23] INFO: Writing conf to disk...
+# [2024-05-08 04:48:23] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002174500
+# [2024-05-08 04:48:24] INFO: Calculated checksum: 9f2e564e
+# [2024-05-08 04:48:27] INFO: Calculated checksum: 49be8d9f
+# [2024-05-08 04:48:27] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002174500
+# [2024-05-08 04:48:27] INFO: Writing to disk took 4.92173 seconds
+# [2024-05-08 04:48:27] INFO: ======================================================================
+# [2024-05-08 04:48:27] INFO: Start sweeping...
+# [2024-05-08 04:53:35] INFO: It took 307.979 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:53:35] INFO: Plaquette = 0.654164
+# [2024-05-08 04:53:35] INFO: Polyakov loop = (-0.00142535,-0.0021773)
+# [2024-05-08 04:53:35] INFO: Writing conf to disk...
+# [2024-05-08 04:53:35] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002175000
+# [2024-05-08 04:53:37] INFO: Calculated checksum: 610f93e0
+# [2024-05-08 04:53:41] INFO: Calculated checksum: 6f12482
+# [2024-05-08 04:53:41] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002175000
+# [2024-05-08 04:53:41] INFO: Writing to disk took 5.44025 seconds
+# [2024-05-08 04:53:41] INFO: ======================================================================
+# [2024-05-08 04:53:41] INFO: Start sweeping...
+# [2024-05-08 04:58:49] INFO: It took 307.916 seconds to do 500 HBOR sweeps.
+# [2024-05-08 04:58:49] INFO: Plaquette = 0.65415
+# [2024-05-08 04:58:49] INFO: Polyakov loop = (-0.00169149,-0.00184455)
+# [2024-05-08 04:58:49] INFO: Writing conf to disk...
+# [2024-05-08 04:58:49] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002175500
+# [2024-05-08 04:58:51] INFO: Calculated checksum: 8494f2b
+# [2024-05-08 04:58:54] INFO: Calculated checksum: a739c84
+# [2024-05-08 04:58:54] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002175500
+# [2024-05-08 04:58:54] INFO: Writing to disk took 5.10937 seconds
+# [2024-05-08 04:58:54] INFO: ======================================================================
+# [2024-05-08 04:58:54] INFO: Start sweeping...
+# [2024-05-08 05:04:02] INFO: It took 307.859 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:04:02] INFO: Plaquette = 0.654165
+# [2024-05-08 05:04:02] INFO: Polyakov loop = (-0.00156194,-0.00494157)
+# [2024-05-08 05:04:02] INFO: Writing conf to disk...
+# [2024-05-08 05:04:02] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002176000
+# [2024-05-08 05:04:04] INFO: Calculated checksum: fdc1f634
+# [2024-05-08 05:04:07] INFO: Calculated checksum: 230494ee
+# [2024-05-08 05:04:07] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002176000
+# [2024-05-08 05:04:07] INFO: Writing to disk took 4.88116 seconds
+# [2024-05-08 05:04:07] INFO: ======================================================================
+# [2024-05-08 05:04:07] INFO: Start sweeping...
+# [2024-05-08 05:09:15] INFO: It took 307.976 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:09:15] INFO: Plaquette = 0.654076
+# [2024-05-08 05:09:15] INFO: Polyakov loop = (-0.00230653,-0.00356609)
+# [2024-05-08 05:09:15] INFO: Writing conf to disk...
+# [2024-05-08 05:09:15] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002176500
+# [2024-05-08 05:09:17] INFO: Calculated checksum: 1f088db0
+# [2024-05-08 05:09:20] INFO: Calculated checksum: 8890bd17
+# [2024-05-08 05:09:20] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002176500
+# [2024-05-08 05:09:20] INFO: Writing to disk took 4.88207 seconds
+# [2024-05-08 05:09:20] INFO: ======================================================================
+# [2024-05-08 05:09:20] INFO: Start sweeping...
+# [2024-05-08 05:14:28] INFO: It took 308.44 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:14:28] INFO: Plaquette = 0.654179
+# [2024-05-08 05:14:28] INFO: Polyakov loop = (-0.00182041,-0.00389295)
+# [2024-05-08 05:14:28] INFO: Writing conf to disk...
+# [2024-05-08 05:14:28] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002177000
+# [2024-05-08 05:14:30] INFO: Calculated checksum: c9a17d33
+# [2024-05-08 05:14:33] INFO: Calculated checksum: a09ebfc1
+# [2024-05-08 05:14:33] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002177000
+# [2024-05-08 05:14:33] INFO: Writing to disk took 4.98123 seconds
+# [2024-05-08 05:14:33] INFO: ======================================================================
+# [2024-05-08 05:14:33] INFO: Start sweeping...
+# [2024-05-08 05:19:41] INFO: It took 307.997 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:19:41] INFO: Plaquette = 0.654225
+# [2024-05-08 05:19:41] INFO: Polyakov loop = (-0.000829323,-0.00254694)
+# [2024-05-08 05:19:41] INFO: Writing conf to disk...
+# [2024-05-08 05:19:41] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002177500
+# [2024-05-08 05:19:43] INFO: Calculated checksum: f973ea58
+# [2024-05-08 05:19:46] INFO: Calculated checksum: abcbd734
+# [2024-05-08 05:19:46] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002177500
+# [2024-05-08 05:19:46] INFO: Writing to disk took 4.91998 seconds
+# [2024-05-08 05:19:46] INFO: ======================================================================
+# [2024-05-08 05:19:46] INFO: Start sweeping...
+# [2024-05-08 05:24:54] INFO: It took 307.986 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:24:54] INFO: Plaquette = 0.654127
+# [2024-05-08 05:24:54] INFO: Polyakov loop = (-0.00231958,-0.00255959)
+# [2024-05-08 05:24:54] INFO: Writing conf to disk...
+# [2024-05-08 05:24:54] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002178000
+# [2024-05-08 05:24:56] INFO: Calculated checksum: 149f1d0a
+# [2024-05-08 05:24:59] INFO: Calculated checksum: 3fd2da70
+# [2024-05-08 05:24:59] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002178000
+# [2024-05-08 05:24:59] INFO: Writing to disk took 4.89864 seconds
+# [2024-05-08 05:24:59] INFO: ======================================================================
+# [2024-05-08 05:24:59] INFO: Start sweeping...
+# [2024-05-08 05:30:07] INFO: It took 307.899 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:30:07] INFO: Plaquette = 0.654177
+# [2024-05-08 05:30:07] INFO: Polyakov loop = (-0.00161451,-0.00481318)
+# [2024-05-08 05:30:07] INFO: Writing conf to disk...
+# [2024-05-08 05:30:07] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002178500
+# [2024-05-08 05:30:09] INFO: Calculated checksum: dd13e8fa
+# [2024-05-08 05:30:12] INFO: Calculated checksum: 4970ab99
+# [2024-05-08 05:30:12] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002178500
+# [2024-05-08 05:30:12] INFO: Writing to disk took 4.94311 seconds
+# [2024-05-08 05:30:12] INFO: ======================================================================
+# [2024-05-08 05:30:12] INFO: Start sweeping...
+# [2024-05-08 05:35:20] INFO: It took 307.953 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:35:20] INFO: Plaquette = 0.654007
+# [2024-05-08 05:35:20] INFO: Polyakov loop = (-0.00335956,-0.00431235)
+# [2024-05-08 05:35:20] INFO: Writing conf to disk...
+# [2024-05-08 05:35:20] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002179000
+# [2024-05-08 05:35:22] INFO: Calculated checksum: e972b3c2
+# [2024-05-08 05:35:25] INFO: Calculated checksum: b09edfe3
+# [2024-05-08 05:35:25] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002179000
+# [2024-05-08 05:35:25] INFO: Writing to disk took 4.8926 seconds
+# [2024-05-08 05:35:25] INFO: ======================================================================
+# [2024-05-08 05:35:25] INFO: Start sweeping...
+# [2024-05-08 05:40:33] INFO: It took 308.563 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:40:33] INFO: Plaquette = 0.654075
+# [2024-05-08 05:40:33] INFO: Polyakov loop = (-0.00130594,-0.00287302)
+# [2024-05-08 05:40:33] INFO: Writing conf to disk...
+# [2024-05-08 05:40:33] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002179500
+# [2024-05-08 05:40:35] INFO: Calculated checksum: 286d7bdb
+# [2024-05-08 05:40:38] INFO: Calculated checksum: 731e2354
+# [2024-05-08 05:40:38] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002179500
+# [2024-05-08 05:40:38] INFO: Writing to disk took 4.90464 seconds
+# [2024-05-08 05:40:38] INFO: ======================================================================
+# [2024-05-08 05:40:38] INFO: Start sweeping...
+# [2024-05-08 05:45:47] INFO: It took 308.445 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:45:47] INFO: Plaquette = 0.654172
+# [2024-05-08 05:45:47] INFO: Polyakov loop = (-0.000566337,-0.0036092)
+# [2024-05-08 05:45:47] INFO: Writing conf to disk...
+# [2024-05-08 05:45:47] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002180000
+# [2024-05-08 05:45:49] INFO: Calculated checksum: 99468098
+# [2024-05-08 05:45:52] INFO: Calculated checksum: 1eee068b
+# [2024-05-08 05:45:52] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002180000
+# [2024-05-08 05:45:52] INFO: Writing to disk took 5.1396 seconds
+# [2024-05-08 05:45:52] INFO: ======================================================================
+# [2024-05-08 05:45:52] INFO: Start sweeping...
+# [2024-05-08 05:51:00] INFO: It took 307.934 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:51:00] INFO: Plaquette = 0.654042
+# [2024-05-08 05:51:00] INFO: Polyakov loop = (-0.00198036,-0.00330945)
+# [2024-05-08 05:51:00] INFO: Writing conf to disk...
+# [2024-05-08 05:51:00] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002180500
+# [2024-05-08 05:51:02] INFO: Calculated checksum: 3d35a8eb
+# [2024-05-08 05:51:05] INFO: Calculated checksum: 9963fb42
+# [2024-05-08 05:51:05] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002180500
+# [2024-05-08 05:51:05] INFO: Writing to disk took 4.90569 seconds
+# [2024-05-08 05:51:05] INFO: ======================================================================
+# [2024-05-08 05:51:05] INFO: Start sweeping...
+# [2024-05-08 05:56:13] INFO: It took 307.944 seconds to do 500 HBOR sweeps.
+# [2024-05-08 05:56:13] INFO: Plaquette = 0.65413
+# [2024-05-08 05:56:13] INFO: Polyakov loop = (-0.00229618,-0.00330379)
+# [2024-05-08 05:56:13] INFO: Writing conf to disk...
+# [2024-05-08 05:56:13] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002181000
+# [2024-05-08 05:56:15] INFO: Calculated checksum: 488d76de
+# [2024-05-08 05:56:18] INFO: Calculated checksum: a6c1b8fc
+# [2024-05-08 05:56:18] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002181000
+# [2024-05-08 05:56:18] INFO: Writing to disk took 4.90536 seconds
+# [2024-05-08 05:56:18] INFO: ======================================================================
+# [2024-05-08 05:56:18] INFO: Start sweeping...
+# [2024-05-08 06:01:26] INFO: It took 308.002 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:01:26] INFO: Plaquette = 0.654263
+# [2024-05-08 06:01:26] INFO: Polyakov loop = (-0.00104022,-0.00373471)
+# [2024-05-08 06:01:26] INFO: Writing conf to disk...
+# [2024-05-08 06:01:26] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002181500
+# [2024-05-08 06:01:28] INFO: Calculated checksum: 9b78339c
+# [2024-05-08 06:01:30] INFO: Calculated checksum: e9ab5f6d
+# [2024-05-08 06:01:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002181500
+# [2024-05-08 06:01:31] INFO: Writing to disk took 4.90703 seconds
+# [2024-05-08 06:01:31] INFO: ======================================================================
+# [2024-05-08 06:01:31] INFO: Start sweeping...
+# [2024-05-08 06:06:39] INFO: It took 308.937 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:06:40] INFO: Plaquette = 0.654247
+# [2024-05-08 06:06:40] INFO: Polyakov loop = (-0.00232957,-0.00267846)
+# [2024-05-08 06:06:40] INFO: Writing conf to disk...
+# [2024-05-08 06:06:40] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002182000
+# [2024-05-08 06:06:41] INFO: Calculated checksum: e0ba9de3
+# [2024-05-08 06:06:44] INFO: Calculated checksum: f22c594b
+# [2024-05-08 06:06:44] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002182000
+# [2024-05-08 06:06:45] INFO: Writing to disk took 4.992 seconds
+# [2024-05-08 06:06:45] INFO: ======================================================================
+# [2024-05-08 06:06:45] INFO: Start sweeping...
+# [2024-05-08 06:11:52] INFO: It took 307.833 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:11:52] INFO: Plaquette = 0.654101
+# [2024-05-08 06:11:52] INFO: Polyakov loop = (-0.00170741,-0.00278877)
+# [2024-05-08 06:11:52] INFO: Writing conf to disk...
+# [2024-05-08 06:11:52] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002182500
+# [2024-05-08 06:11:54] INFO: Calculated checksum: e3b2059f
+# [2024-05-08 06:11:57] INFO: Calculated checksum: 9f87db8f
+# [2024-05-08 06:11:57] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002182500
+# [2024-05-08 06:11:57] INFO: Writing to disk took 4.99957 seconds
+# [2024-05-08 06:11:57] INFO: ======================================================================
+# [2024-05-08 06:11:57] INFO: Start sweeping...
+# [2024-05-08 06:17:05] INFO: It took 308.022 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:17:05] INFO: Plaquette = 0.654171
+# [2024-05-08 06:17:05] INFO: Polyakov loop = (-0.000761895,-0.00353138)
+# [2024-05-08 06:17:05] INFO: Writing conf to disk...
+# [2024-05-08 06:17:05] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002183000
+# [2024-05-08 06:17:07] INFO: Calculated checksum: 76de4a9f
+# [2024-05-08 06:17:10] INFO: Calculated checksum: 9e0d5a32
+# [2024-05-08 06:17:10] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002183000
+# [2024-05-08 06:17:10] INFO: Writing to disk took 5.05842 seconds
+# [2024-05-08 06:17:10] INFO: ======================================================================
+# [2024-05-08 06:17:10] INFO: Start sweeping...
+# [2024-05-08 06:22:18] INFO: It took 307.914 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:22:18] INFO: Plaquette = 0.654132
+# [2024-05-08 06:22:18] INFO: Polyakov loop = (-0.00170009,-0.00242273)
+# [2024-05-08 06:22:18] INFO: Writing conf to disk...
+# [2024-05-08 06:22:18] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002183500
+# [2024-05-08 06:22:20] INFO: Calculated checksum: 1a44853d
+# [2024-05-08 06:22:23] INFO: Calculated checksum: 3aa0bd73
+# [2024-05-08 06:22:23] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002183500
+# [2024-05-08 06:22:23] INFO: Writing to disk took 4.88549 seconds
+# [2024-05-08 06:22:23] INFO: ======================================================================
+# [2024-05-08 06:22:23] INFO: Start sweeping...
+# [2024-05-08 06:27:31] INFO: It took 308.036 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:27:31] INFO: Plaquette = 0.654244
+# [2024-05-08 06:27:31] INFO: Polyakov loop = (-0.00174324,-0.00386259)
+# [2024-05-08 06:27:31] INFO: Writing conf to disk...
+# [2024-05-08 06:27:31] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002184000
+# [2024-05-08 06:27:33] INFO: Calculated checksum: 58f31f6b
+# [2024-05-08 06:27:36] INFO: Calculated checksum: cf0c653
+# [2024-05-08 06:27:36] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002184000
+# [2024-05-08 06:27:36] INFO: Writing to disk took 4.94753 seconds
+# [2024-05-08 06:27:36] INFO: ======================================================================
+# [2024-05-08 06:27:36] INFO: Start sweeping...
+# [2024-05-08 06:32:44] INFO: It took 307.929 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:32:44] INFO: Plaquette = 0.654092
+# [2024-05-08 06:32:44] INFO: Polyakov loop = (-0.00201912,-0.00190391)
+# [2024-05-08 06:32:44] INFO: Writing conf to disk...
+# [2024-05-08 06:32:44] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002184500
+# [2024-05-08 06:32:46] INFO: Calculated checksum: e70a97fc
+# [2024-05-08 06:32:49] INFO: Calculated checksum: 53a176d1
+# [2024-05-08 06:32:49] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002184500
+# [2024-05-08 06:32:49] INFO: Writing to disk took 4.91163 seconds
+# [2024-05-08 06:32:49] INFO: ======================================================================
+# [2024-05-08 06:32:49] INFO: Start sweeping...
+# [2024-05-08 06:37:57] INFO: It took 308.027 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:37:57] INFO: Plaquette = 0.654104
+# [2024-05-08 06:37:57] INFO: Polyakov loop = (-0.00115225,-0.00364536)
+# [2024-05-08 06:37:57] INFO: Writing conf to disk...
+# [2024-05-08 06:37:57] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002185000
+# [2024-05-08 06:37:59] INFO: Calculated checksum: df0304bd
+# [2024-05-08 06:38:02] INFO: Calculated checksum: e12021c9
+# [2024-05-08 06:38:02] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002185000
+# [2024-05-08 06:38:02] INFO: Writing to disk took 5.17307 seconds
+# [2024-05-08 06:38:02] INFO: ======================================================================
+# [2024-05-08 06:38:02] INFO: Start sweeping...
+# [2024-05-08 06:43:10] INFO: It took 308.04 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:43:11] INFO: Plaquette = 0.654117
+# [2024-05-08 06:43:11] INFO: Polyakov loop = (-0.00185509,-0.00344203)
+# [2024-05-08 06:43:11] INFO: Writing conf to disk...
+# [2024-05-08 06:43:11] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002185500
+# [2024-05-08 06:43:12] INFO: Calculated checksum: 709508d0
+# [2024-05-08 06:43:15] INFO: Calculated checksum: 765b01ae
+# [2024-05-08 06:43:15] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002185500
+# [2024-05-08 06:43:16] INFO: Writing to disk took 5.01864 seconds
+# [2024-05-08 06:43:16] INFO: ======================================================================
+# [2024-05-08 06:43:16] INFO: Start sweeping...
+# [2024-05-08 06:48:24] INFO: It took 308.034 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:48:24] INFO: Plaquette = 0.654203
+# [2024-05-08 06:48:24] INFO: Polyakov loop = (-0.00212182,-0.00464155)
+# [2024-05-08 06:48:24] INFO: Writing conf to disk...
+# [2024-05-08 06:48:24] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002186000
+# [2024-05-08 06:48:25] INFO: Calculated checksum: 6131285a
+# [2024-05-08 06:48:28] INFO: Calculated checksum: 288d510c
+# [2024-05-08 06:48:28] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002186000
+# [2024-05-08 06:48:29] INFO: Writing to disk took 4.98309 seconds
+# [2024-05-08 06:48:29] INFO: ======================================================================
+# [2024-05-08 06:48:29] INFO: Start sweeping...
+# [2024-05-08 06:53:37] INFO: It took 308.037 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:53:37] INFO: Plaquette = 0.654072
+# [2024-05-08 06:53:37] INFO: Polyakov loop = (-0.00304485,-0.00345681)
+# [2024-05-08 06:53:37] INFO: Writing conf to disk...
+# [2024-05-08 06:53:37] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002186500
+# [2024-05-08 06:53:39] INFO: Calculated checksum: e5318b6d
+# [2024-05-08 06:53:42] INFO: Calculated checksum: 2e72676b
+# [2024-05-08 06:53:42] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002186500
+# [2024-05-08 06:53:42] INFO: Writing to disk took 4.95576 seconds
+# [2024-05-08 06:53:42] INFO: ======================================================================
+# [2024-05-08 06:53:42] INFO: Start sweeping...
+# [2024-05-08 06:58:50] INFO: It took 307.944 seconds to do 500 HBOR sweeps.
+# [2024-05-08 06:58:50] INFO: Plaquette = 0.654074
+# [2024-05-08 06:58:50] INFO: Polyakov loop = (-0.00164111,-0.00207188)
+# [2024-05-08 06:58:50] INFO: Writing conf to disk...
+# [2024-05-08 06:58:50] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002187000
+# [2024-05-08 06:58:51] INFO: Calculated checksum: a841f8b5
+# [2024-05-08 06:58:54] INFO: Calculated checksum: 785f5d8c
+# [2024-05-08 06:58:54] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002187000
+# [2024-05-08 06:58:54] INFO: Writing to disk took 4.89701 seconds
+# [2024-05-08 06:58:54] INFO: ======================================================================
+# [2024-05-08 06:58:54] INFO: Start sweeping...
+# [2024-05-08 07:04:02] INFO: It took 308.006 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:04:03] INFO: Plaquette = 0.654283
+# [2024-05-08 07:04:03] INFO: Polyakov loop = (-0.00211542,-0.00373416)
+# [2024-05-08 07:04:03] INFO: Writing conf to disk...
+# [2024-05-08 07:04:03] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002187500
+# [2024-05-08 07:04:04] INFO: Calculated checksum: fb5f330
+# [2024-05-08 07:04:07] INFO: Calculated checksum: 52081672
+# [2024-05-08 07:04:07] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002187500
+# [2024-05-08 07:04:07] INFO: Writing to disk took 4.89476 seconds
+# [2024-05-08 07:04:07] INFO: ======================================================================
+# [2024-05-08 07:04:07] INFO: Start sweeping...
+# [2024-05-08 07:09:15] INFO: It took 308.009 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:09:15] INFO: Plaquette = 0.654162
+# [2024-05-08 07:09:15] INFO: Polyakov loop = (-0.00232488,-0.00257064)
+# [2024-05-08 07:09:15] INFO: Writing conf to disk...
+# [2024-05-08 07:09:15] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002188000
+# [2024-05-08 07:09:17] INFO: Calculated checksum: 8caccc66
+# [2024-05-08 07:09:20] INFO: Calculated checksum: 5a2ec7fc
+# [2024-05-08 07:09:20] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002188000
+# [2024-05-08 07:09:20] INFO: Writing to disk took 5.00405 seconds
+# [2024-05-08 07:09:20] INFO: ======================================================================
+# [2024-05-08 07:09:20] INFO: Start sweeping...
+# [2024-05-08 07:14:28] INFO: It took 308.012 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:14:28] INFO: Plaquette = 0.65411
+# [2024-05-08 07:14:28] INFO: Polyakov loop = (-0.00206796,-0.00373257)
+# [2024-05-08 07:14:28] INFO: Writing conf to disk...
+# [2024-05-08 07:14:28] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002188500
+# [2024-05-08 07:14:30] INFO: Calculated checksum: e92b5a97
+# [2024-05-08 07:14:33] INFO: Calculated checksum: 930f9433
+# [2024-05-08 07:14:33] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002188500
+# [2024-05-08 07:14:34] INFO: Writing to disk took 5.07408 seconds
+# [2024-05-08 07:14:34] INFO: ======================================================================
+# [2024-05-08 07:14:34] INFO: Start sweeping...
+# [2024-05-08 07:19:41] INFO: It took 307.876 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:19:41] INFO: Plaquette = 0.654137
+# [2024-05-08 07:19:41] INFO: Polyakov loop = (-0.00223429,-0.00324828)
+# [2024-05-08 07:19:41] INFO: Writing conf to disk...
+# [2024-05-08 07:19:41] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002189000
+# [2024-05-08 07:19:43] INFO: Calculated checksum: 21bf4a9
+# [2024-05-08 07:19:47] INFO: Calculated checksum: cdc246ab
+# [2024-05-08 07:19:47] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002189000
+# [2024-05-08 07:19:47] INFO: Writing to disk took 5.11946 seconds
+# [2024-05-08 07:19:47] INFO: ======================================================================
+# [2024-05-08 07:19:47] INFO: Start sweeping...
+# [2024-05-08 07:24:55] INFO: It took 307.924 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:24:55] INFO: Plaquette = 0.654145
+# [2024-05-08 07:24:55] INFO: Polyakov loop = (-0.000734624,-0.00226682)
+# [2024-05-08 07:24:55] INFO: Writing conf to disk...
+# [2024-05-08 07:24:55] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002189500
+# [2024-05-08 07:24:56] INFO: Calculated checksum: 510ef7c5
+# [2024-05-08 07:24:59] INFO: Calculated checksum: ab38c186
+# [2024-05-08 07:24:59] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002189500
+# [2024-05-08 07:25:00] INFO: Writing to disk took 4.98025 seconds
+# [2024-05-08 07:25:00] INFO: ======================================================================
+# [2024-05-08 07:25:00] INFO: Start sweeping...
+# [2024-05-08 07:30:07] INFO: It took 307.94 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:30:08] INFO: Plaquette = 0.654145
+# [2024-05-08 07:30:08] INFO: Polyakov loop = (-0.000596658,-0.00299534)
+# [2024-05-08 07:30:08] INFO: Writing conf to disk...
+# [2024-05-08 07:30:08] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002190000
+# [2024-05-08 07:30:09] INFO: Calculated checksum: d36b8b5
+# [2024-05-08 07:30:12] INFO: Calculated checksum: 38bc64d2
+# [2024-05-08 07:30:12] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002190000
+# [2024-05-08 07:30:12] INFO: Writing to disk took 4.94805 seconds
+# [2024-05-08 07:30:12] INFO: ======================================================================
+# [2024-05-08 07:30:12] INFO: Start sweeping...
+# [2024-05-08 07:35:21] INFO: It took 308.521 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:35:21] INFO: Plaquette = 0.654171
+# [2024-05-08 07:35:21] INFO: Polyakov loop = (-0.00125529,-0.00247998)
+# [2024-05-08 07:35:21] INFO: Writing conf to disk...
+# [2024-05-08 07:35:21] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002190500
+# [2024-05-08 07:35:23] INFO: Calculated checksum: f495bfb2
+# [2024-05-08 07:35:26] INFO: Calculated checksum: 695548ee
+# [2024-05-08 07:35:26] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002190500
+# [2024-05-08 07:35:26] INFO: Writing to disk took 4.94987 seconds
+# [2024-05-08 07:35:26] INFO: ======================================================================
+# [2024-05-08 07:35:26] INFO: Start sweeping...
+# [2024-05-08 07:40:34] INFO: It took 307.949 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:40:34] INFO: Plaquette = 0.654131
+# [2024-05-08 07:40:34] INFO: Polyakov loop = (-0.000610674,-0.00349187)
+# [2024-05-08 07:40:34] INFO: Writing conf to disk...
+# [2024-05-08 07:40:34] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002191000
+# [2024-05-08 07:40:36] INFO: Calculated checksum: 7028ce5d
+# [2024-05-08 07:40:39] INFO: Calculated checksum: 9f6c6036
+# [2024-05-08 07:40:39] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002191000
+# [2024-05-08 07:40:39] INFO: Writing to disk took 4.98873 seconds
+# [2024-05-08 07:40:39] INFO: ======================================================================
+# [2024-05-08 07:40:39] INFO: Start sweeping...
+# [2024-05-08 07:45:47] INFO: It took 307.98 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:45:47] INFO: Plaquette = 0.654125
+# [2024-05-08 07:45:47] INFO: Polyakov loop = (-0.00104989,-0.00298455)
+# [2024-05-08 07:45:47] INFO: Writing conf to disk...
+# [2024-05-08 07:45:47] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002191500
+# [2024-05-08 07:45:49] INFO: Calculated checksum: 1444b449
+# [2024-05-08 07:45:52] INFO: Calculated checksum: 26844096
+# [2024-05-08 07:45:52] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002191500
+# [2024-05-08 07:45:52] INFO: Writing to disk took 4.92331 seconds
+# [2024-05-08 07:45:52] INFO: ======================================================================
+# [2024-05-08 07:45:52] INFO: Start sweeping...
+# [2024-05-08 07:51:00] INFO: It took 307.978 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:51:00] INFO: Plaquette = 0.654256
+# [2024-05-08 07:51:00] INFO: Polyakov loop = (-0.00229695,-0.00355938)
+# [2024-05-08 07:51:00] INFO: Writing conf to disk...
+# [2024-05-08 07:51:00] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002192000
+# [2024-05-08 07:51:02] INFO: Calculated checksum: b49dcfc1
+# [2024-05-08 07:51:05] INFO: Calculated checksum: a3bb051c
+# [2024-05-08 07:51:05] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002192000
+# [2024-05-08 07:51:05] INFO: Writing to disk took 4.93723 seconds
+# [2024-05-08 07:51:05] INFO: ======================================================================
+# [2024-05-08 07:51:05] INFO: Start sweeping...
+# [2024-05-08 07:56:13] INFO: It took 307.952 seconds to do 500 HBOR sweeps.
+# [2024-05-08 07:56:13] INFO: Plaquette = 0.654152
+# [2024-05-08 07:56:13] INFO: Polyakov loop = (-0.00244697,-0.00212354)
+# [2024-05-08 07:56:13] INFO: Writing conf to disk...
+# [2024-05-08 07:56:13] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002192500
+# [2024-05-08 07:56:15] INFO: Calculated checksum: 5fd8621f
+# [2024-05-08 07:56:18] INFO: Calculated checksum: df0e06b5
+# [2024-05-08 07:56:18] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002192500
+# [2024-05-08 07:56:18] INFO: Writing to disk took 4.94738 seconds
+# [2024-05-08 07:56:18] INFO: ======================================================================
+# [2024-05-08 07:56:18] INFO: Start sweeping...
+# [2024-05-08 08:01:26] INFO: It took 307.834 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:01:26] INFO: Plaquette = 0.654192
+# [2024-05-08 08:01:26] INFO: Polyakov loop = (-0.00183434,-0.00340206)
+# [2024-05-08 08:01:26] INFO: Writing conf to disk...
+# [2024-05-08 08:01:26] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002193000
+# [2024-05-08 08:01:27] INFO: Calculated checksum: b767025e
+# [2024-05-08 08:01:30] INFO: Calculated checksum: 7f660aea
+# [2024-05-08 08:01:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002193000
+# [2024-05-08 08:01:31] INFO: Writing to disk took 4.93095 seconds
+# [2024-05-08 08:01:31] INFO: ======================================================================
+# [2024-05-08 08:01:31] INFO: Start sweeping...
+# [2024-05-08 08:06:38] INFO: It took 307.872 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:06:38] INFO: Plaquette = 0.654292
+# [2024-05-08 08:06:38] INFO: Polyakov loop = (-0.00216793,-0.0037873)
+# [2024-05-08 08:06:38] INFO: Writing conf to disk...
+# [2024-05-08 08:06:38] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002193500
+# [2024-05-08 08:06:40] INFO: Calculated checksum: ecaa84b4
+# [2024-05-08 08:06:43] INFO: Calculated checksum: 3238b9c2
+# [2024-05-08 08:06:43] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002193500
+# [2024-05-08 08:06:43] INFO: Writing to disk took 5.00298 seconds
+# [2024-05-08 08:06:43] INFO: ======================================================================
+# [2024-05-08 08:06:43] INFO: Start sweeping...
+# [2024-05-08 08:11:51] INFO: It took 307.946 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:11:51] INFO: Plaquette = 0.65425
+# [2024-05-08 08:11:51] INFO: Polyakov loop = (-0.00218882,-0.0036579)
+# [2024-05-08 08:11:51] INFO: Writing conf to disk...
+# [2024-05-08 08:11:51] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002194000
+# [2024-05-08 08:11:53] INFO: Calculated checksum: 976fb985
+# [2024-05-08 08:11:56] INFO: Calculated checksum: 3cc04e72
+# [2024-05-08 08:11:56] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002194000
+# [2024-05-08 08:11:57] INFO: Writing to disk took 5.13036 seconds
+# [2024-05-08 08:11:57] INFO: ======================================================================
+# [2024-05-08 08:11:57] INFO: Start sweeping...
+# [2024-05-08 08:17:04] INFO: It took 307.899 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:17:04] INFO: Plaquette = 0.654065
+# [2024-05-08 08:17:04] INFO: Polyakov loop = (-0.00272759,-0.00232018)
+# [2024-05-08 08:17:04] INFO: Writing conf to disk...
+# [2024-05-08 08:17:04] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002194500
+# [2024-05-08 08:17:06] INFO: Calculated checksum: 524951d0
+# [2024-05-08 08:17:09] INFO: Calculated checksum: cdcdff5
+# [2024-05-08 08:17:09] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002194500
+# [2024-05-08 08:17:09] INFO: Writing to disk took 4.93128 seconds
+# [2024-05-08 08:17:09] INFO: ======================================================================
+# [2024-05-08 08:17:09] INFO: Start sweeping...
+# [2024-05-08 08:22:17] INFO: It took 307.974 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:22:17] INFO: Plaquette = 0.654268
+# [2024-05-08 08:22:17] INFO: Polyakov loop = (-0.00301139,-0.0035012)
+# [2024-05-08 08:22:17] INFO: Writing conf to disk...
+# [2024-05-08 08:22:17] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002195000
+# [2024-05-08 08:22:19] INFO: Calculated checksum: 7eee0dba
+# [2024-05-08 08:22:22] INFO: Calculated checksum: 5e52c559
+# [2024-05-08 08:22:22] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002195000
+# [2024-05-08 08:22:22] INFO: Writing to disk took 4.94767 seconds
+# [2024-05-08 08:22:22] INFO: ======================================================================
+# [2024-05-08 08:22:22] INFO: Start sweeping...
+# [2024-05-08 08:27:30] INFO: It took 307.838 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:27:30] INFO: Plaquette = 0.65425
+# [2024-05-08 08:27:30] INFO: Polyakov loop = (-0.00129832,-0.00275495)
+# [2024-05-08 08:27:30] INFO: Writing conf to disk...
+# [2024-05-08 08:27:30] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002195500
+# [2024-05-08 08:27:32] INFO: Calculated checksum: cb55699d
+# [2024-05-08 08:27:35] INFO: Calculated checksum: 8219fe6f
+# [2024-05-08 08:27:35] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002195500
+# [2024-05-08 08:27:35] INFO: Writing to disk took 4.99503 seconds
+# [2024-05-08 08:27:35] INFO: ======================================================================
+# [2024-05-08 08:27:35] INFO: Start sweeping...
+# [2024-05-08 08:32:43] INFO: It took 307.997 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:32:43] INFO: Plaquette = 0.654157
+# [2024-05-08 08:32:43] INFO: Polyakov loop = (-0.00149374,-0.00354453)
+# [2024-05-08 08:32:43] INFO: Writing conf to disk...
+# [2024-05-08 08:32:43] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002196000
+# [2024-05-08 08:32:45] INFO: Calculated checksum: ec9341fd
+# [2024-05-08 08:32:48] INFO: Calculated checksum: 67a80a7f
+# [2024-05-08 08:32:48] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002196000
+# [2024-05-08 08:32:48] INFO: Writing to disk took 4.65638 seconds
+# [2024-05-08 08:32:48] INFO: ======================================================================
+# [2024-05-08 08:32:48] INFO: Start sweeping...
+# [2024-05-08 08:37:56] INFO: It took 307.914 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:37:56] INFO: Plaquette = 0.654176
+# [2024-05-08 08:37:56] INFO: Polyakov loop = (-0.000757273,-0.00231105)
+# [2024-05-08 08:37:56] INFO: Writing conf to disk...
+# [2024-05-08 08:37:56] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002196500
+# [2024-05-08 08:37:58] INFO: Calculated checksum: f304cf18
+# [2024-05-08 08:38:01] INFO: Calculated checksum: c61c10e0
+# [2024-05-08 08:38:01] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002196500
+# [2024-05-08 08:38:01] INFO: Writing to disk took 4.91761 seconds
+# [2024-05-08 08:38:01] INFO: ======================================================================
+# [2024-05-08 08:38:01] INFO: Start sweeping...
+# [2024-05-08 08:43:09] INFO: It took 307.928 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:43:09] INFO: Plaquette = 0.654229
+# [2024-05-08 08:43:09] INFO: Polyakov loop = (-0.00161599,-0.00304141)
+# [2024-05-08 08:43:09] INFO: Writing conf to disk...
+# [2024-05-08 08:43:09] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002197000
+# [2024-05-08 08:43:11] INFO: Calculated checksum: 38ad6516
+# [2024-05-08 08:43:14] INFO: Calculated checksum: 6f3d262b
+# [2024-05-08 08:43:14] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002197000
+# [2024-05-08 08:43:14] INFO: Writing to disk took 4.95517 seconds
+# [2024-05-08 08:43:14] INFO: ======================================================================
+# [2024-05-08 08:43:14] INFO: Start sweeping...
+# [2024-05-08 08:48:21] INFO: It took 307.765 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:48:22] INFO: Plaquette = 0.654214
+# [2024-05-08 08:48:22] INFO: Polyakov loop = (-0.000877194,-0.00294373)
+# [2024-05-08 08:48:22] INFO: Writing conf to disk...
+# [2024-05-08 08:48:22] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002197500
+# [2024-05-08 08:48:23] INFO: Calculated checksum: 50f1aa8a
+# [2024-05-08 08:48:26] INFO: Calculated checksum: 2ef31398
+# [2024-05-08 08:48:26] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002197500
+# [2024-05-08 08:48:26] INFO: Writing to disk took 4.87892 seconds
+# [2024-05-08 08:48:26] INFO: ======================================================================
+# [2024-05-08 08:48:26] INFO: Start sweeping...
+# [2024-05-08 08:53:34] INFO: It took 307.933 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:53:34] INFO: Plaquette = 0.654262
+# [2024-05-08 08:53:34] INFO: Polyakov loop = (-0.00244063,-0.00377136)
+# [2024-05-08 08:53:34] INFO: Writing conf to disk...
+# [2024-05-08 08:53:34] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002198000
+# [2024-05-08 08:53:36] INFO: Calculated checksum: 46931f06
+# [2024-05-08 08:53:39] INFO: Calculated checksum: 4161716f
+# [2024-05-08 08:53:39] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002198000
+# [2024-05-08 08:53:39] INFO: Writing to disk took 4.89215 seconds
+# [2024-05-08 08:53:39] INFO: ======================================================================
+# [2024-05-08 08:53:39] INFO: Start sweeping...
+# [2024-05-08 08:58:47] INFO: It took 307.793 seconds to do 500 HBOR sweeps.
+# [2024-05-08 08:58:47] INFO: Plaquette = 0.654065
+# [2024-05-08 08:58:47] INFO: Polyakov loop = (-0.000993136,-0.00259693)
+# [2024-05-08 08:58:47] INFO: Writing conf to disk...
+# [2024-05-08 08:58:47] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002198500
+# [2024-05-08 08:58:49] INFO: Calculated checksum: 5e330d00
+# [2024-05-08 08:58:52] INFO: Calculated checksum: c68c8390
+# [2024-05-08 08:58:52] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002198500
+# [2024-05-08 08:58:52] INFO: Writing to disk took 4.8811 seconds
+# [2024-05-08 08:58:52] INFO: ======================================================================
+# [2024-05-08 08:58:52] INFO: Start sweeping...
+# [2024-05-08 09:04:00] INFO: It took 307.899 seconds to do 500 HBOR sweeps.
+# [2024-05-08 09:04:00] INFO: Plaquette = 0.654136
+# [2024-05-08 09:04:00] INFO: Polyakov loop = (-0.000395328,-0.00344391)
+# [2024-05-08 09:04:00] INFO: Writing conf to disk...
+# [2024-05-08 09:04:00] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002199000
+# [2024-05-08 09:04:02] INFO: Calculated checksum: a98b922f
+# [2024-05-08 09:04:05] INFO: Calculated checksum: 56ae4e02
+# [2024-05-08 09:04:05] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002199000
+# [2024-05-08 09:04:05] INFO: Writing to disk took 4.98314 seconds
+# [2024-05-08 09:04:05] INFO: ======================================================================
+# [2024-05-08 09:04:05] INFO: Start sweeping...
+# [2024-05-08 09:09:13] INFO: It took 307.804 seconds to do 500 HBOR sweeps.
+# [2024-05-08 09:09:13] INFO: Plaquette = 0.654034
+# [2024-05-08 09:09:13] INFO: Polyakov loop = (-0.00133442,-0.00311295)
+# [2024-05-08 09:09:13] INFO: Writing conf to disk...
+# [2024-05-08 09:09:13] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002199500
+# [2024-05-08 09:09:15] INFO: Calculated checksum: 512745ee
+# [2024-05-08 09:09:18] INFO: Calculated checksum: b725e0db
+# [2024-05-08 09:09:18] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002199500
+# [2024-05-08 09:09:18] INFO: Writing to disk took 4.91579 seconds
+# [2024-05-08 09:09:18] INFO: ======================================================================
+# [2024-05-08 09:09:18] INFO: Start sweeping...
+# [2024-05-08 09:14:26] INFO: It took 307.88 seconds to do 500 HBOR sweeps.
+# [2024-05-08 09:14:26] INFO: Plaquette = 0.654205
+# [2024-05-08 09:14:26] INFO: Polyakov loop = (-0.00147367,-0.00308369)
+# [2024-05-08 09:14:26] INFO: Writing conf to disk...
+# [2024-05-08 09:14:26] INFO: writeconf_nersc: Writing NERSC configuration ./conf_s054t18_b0672300_a_U002200000
+# [2024-05-08 09:14:27] INFO: Calculated checksum: 66d7664c
+# [2024-05-08 09:14:30] INFO: Calculated checksum: e51054a0
+# [2024-05-08 09:14:30] INFO: Writing RNGSTATE file: ./rand_s054t18_b0672300_a_U002200000
+# [2024-05-08 09:14:31] INFO: Writing to disk took 5.03171 seconds
+# [2024-05-08 09:14:31] INFO: Finalizing MPI
