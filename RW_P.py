@@ -1,27 +1,36 @@
 
+import sys
 import numpy as np
 from latqcdtools.base.readWrite import readTable
 from latqcdtools.physics.statisticalPhysics import reweight
-from latqcdtools.physics.lattice_params import latticeParams
 import latqcdtools.base.logger as logger
 from latqcdtools.statistics.jackknife import jackknife
-from latqcdtools.statistics.bootstr import bootstr
 from latqcdtools.base.plotting import set_params,plt,plot_dots,set_default_param
 from latqcdtools.base.printErrorBars import get_err_str
 
-# Input the N_tau you wanna look at
-Nt=16
-Ns=3*Nt
+Nt=int(sys.argv[1])
+
+if Nt==12:
+    Ns=2*Nt
+else:
+    Ns=3*Nt
+
+logger.info('Nt=',Nt)
+
+
+NBINS = 32
+AXIS  = 1
+NRW   = 301
 
 # Here are our critical beta values from literature, expressed as characters and
 # a floating point number.
 oldBeta = {
   6  : 5.89425,
-  8  : 6.06239,
-#  8  : 6.026,
+  8  : 6.06239,  # Need a point between the given two.
+#  8  : 6.05,
   10 : 6.20873,
-  12 : 6.33514,
-  14 : 6.4473,
+  12 : 6.33514,  # Clean for Ns=24
+  14 : 6.4473,   
   16 : 6.5457,
   18 : 6.6331,
   20 : 6.7132,
@@ -29,13 +38,23 @@ oldBeta = {
 oldBetac = {
   6  : '589425',
   8  : '606239',
-#  8  : '6026',
+#  8  : '605',
   10 : '620873',
   12 : '633514',
   14 : '64473',
   16 : '65457',
   18 : '66331',
   20 : '67132',
+}
+deltaRW = {
+  6  : 0.002,
+  8  : 0.001,
+  10 : 0.0003,
+  12 : 0.001,
+  14 : 0.0003,
+  16 : 0.0002,
+  18 : 0.0002,
+  20 : 0.0002
 }
 
 # This is the starting point around which we reweight.
@@ -51,11 +70,12 @@ S = act0*V     # the original action. Remember the idea of reweighting is that w
                #   this is equivalent to rescaling (reweighting) the measurement by the likelihood
                #   of having a configuration with action SRW (as opposed to the original action) 
 
+
 def RWP(data,xRW,x0) -> float:
     """ Reweight the Polyakov loop
 
     Args:
-        data (list): an list [polyakov loop, action] 
+        data (list): a list [polyakov loop, action] 
         xRW (float): the point we are RWing to 
         x0 (float): the starting point
 
@@ -65,6 +85,7 @@ def RWP(data,xRW,x0) -> float:
     X = data[0]
     S = data[1]
     return reweight(X,xRW,x0,S) 
+
 
 def RWSUSC(data,xRW,x0) -> float:
     """ Reweight the susceptibility. The susceptibility is an observable that is
@@ -81,24 +102,27 @@ def RWSUSC(data,xRW,x0) -> float:
     """
     X = data[0]
     S = data[1]
-    return reweight(X**2,xRW,x0,S) - reweight(X,xRW,x0,S)**2
+    return Ns**3*( reweight(X**2,xRW,x0,S) - reweight(X,xRW,x0,S)**2 )
 
 
-betas   = []
-MRW     = []
-MRW_err = []
 SUSCRW     = []
 SUSCRW_err = []
-newBetas = np.linspace(beta0-0.010,beta0+0.010,31)
-for beta in newBetas:
-    pRW        = beta 
-    MRWm, MRWe = jackknife( RWP, [PL0, S], args=(pRW,beta0) )
-    SUSCRWm, SUSCRWe = jackknife( RWSUSC, [PL0, S], args=(pRW,beta0) )
-    MRW.append(MRWm)
-    MRW_err.append(MRWe)
+RWBetas = np.linspace((1-deltaRW[Nt])*beta0,(1+deltaRW[Nt])*beta0,NRW)
+
+
+# findBetaMax has trouble resolving the mean under the jackknife if the number of RW points is
+# too small. But increasing the number of points massively slows things down. I decided to use
+# this loop to get a more accurate picture of the mean, then jackknife(findBetaMax) only to
+# estimate the error bar
+chimax=-1
+bmax=-1
+for pRW in RWBetas:
+    SUSCRWm, SUSCRWe = jackknife( RWSUSC, [PL0, S], args=(pRW,beta0), numb_blocks=NBINS, conf_axis=AXIS )
+    if SUSCRWm > chimax:
+        chimax = SUSCRWm
+        bmax = pRW 
     SUSCRW.append(SUSCRWm)
     SUSCRW_err.append(SUSCRWe)
-    betas.append(beta)
 
 
 def findBetaMax(PL0S) -> float:
@@ -134,45 +158,25 @@ def findBetaMax(PL0S) -> float:
     Returns:
         float: critical beta 
     """
-    RWBetas = np.linspace((1-0.001)*oldBeta[Nt],(1+0.001)*oldBeta[Nt],1001)
-    SUSCmax = 0
+    SUSCmax = -1
     betamax = -1
-    for beta in RWBetas:
-        pRW     = beta 
+    for pRW in RWBetas:
         SUSCRWm = RWSUSC(PL0S,pRW,beta0)
         if SUSCRWm > SUSCmax:
             SUSCmax = SUSCRWm
-            betamax = beta
+            betamax = pRW 
     return betamax
 
-def findTc(PL0S) -> float:
-    """ Same thing as above but for the temperature.
 
-    Args:
-        PL0S (array): original Polyakov loop
-
-    Returns:
-        float: critical temperature 
-    """
-    RWBetas = np.linspace((1-0.001)*oldBeta[Nt],(1+0.001)*oldBeta[Nt],1001)
-    SUSCmax = 0
-    betamax = -1
-    for beta in RWBetas:
-        pRW     = beta 
-        SUSCRWm = RWSUSC(PL0S,pRW,beta0)
-        if SUSCRWm > SUSCmax:
-            SUSCmax = SUSCRWm
-            betamax = beta
-    lp = latticeParams(Ns,Nt,betamax,None,None,None,scaleType='r0')
-    return lp.getT() 
-
-bmax, bmaxerr = bootstr( findBetaMax, [PL0,S], numb_samples=300 ) 
-Tc, Tcerr     = bootstr( findTc, [PL0,S], numb_samples=300 ) 
-logger.info('beta_c =',get_err_str(bmax,bmaxerr))
-logger.info('T_c =',get_err_str(Tc,Tcerr))
+_ , bmaxerr = jackknife( findBetaMax, [PL0,S], numb_blocks=NBINS, conf_axis=AXIS) 
+logger.info('beta_c(JACK) =',get_err_str(bmax,bmaxerr))
+maxsusc,maxsuscerr = jackknife( RWSUSC, [PL0, S], args=(bmax,beta0), numb_blocks=NBINS,conf_axis=AXIS )
+logger.info('chi_max =',get_err_str(maxsusc,maxsuscerr))
 
 set_default_param(font_size=8)
-plot_dots(betas,SUSCRW,SUSCRW_err,color='blue',marker=None)
+plot_dots(RWBetas,SUSCRW,SUSCRW_err,color='blue',marker=None)
+plot_dots([bmax],[maxsusc],[maxsuscerr],xedata=[bmaxerr],color='red',marker=None)
 set_params(xlabel='$\\beta$',ylabel='$\\chi_{|P|}$',title='RW Pure SU(3), $N_\\tau='+str(Nt)+'$')
 plt.tight_layout() # this repositions things to make the plot look nicer
+plt.savefig('RW_figures/Nt'+str(Nt)+'.pdf')
 plt.show() 
