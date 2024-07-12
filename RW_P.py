@@ -18,7 +18,7 @@ else:
 logger.info('Nt=',Nt)
 
 
-NBINS = 32
+NBINS = 64
 AXIS  = 1
 NRW   = 301
 
@@ -168,7 +168,7 @@ def findBetaMax(PL0S) -> float:
     return betamax
 
 
-_ , bmaxerr = jackknife( findBetaMax, [PL0,S], numb_blocks=NBINS, conf_axis=AXIS) 
+_, bmaxerr = jackknife( findBetaMax, [PL0,S], numb_blocks=NBINS, conf_axis=AXIS) 
 logger.info('beta_c(JACK) =',get_err_str(bmax,bmaxerr))
 maxsusc,maxsuscerr = jackknife( RWSUSC, [PL0, S], args=(bmax,beta0), numb_blocks=NBINS,conf_axis=AXIS )
 logger.info('chi_max =',get_err_str(maxsusc,maxsuscerr))
@@ -177,6 +177,7 @@ set_default_param(font_size=8)
 plot_dots(RWBetas,SUSCRW,SUSCRW_err,color='blue',marker=None)
 plot_dots([bmax],[maxsusc],[maxsuscerr],xedata=[bmaxerr],color='red',marker=None)
 set_params(xlabel='$\\beta$',ylabel='$\\chi_{|P|}$',title='RW Pure SU(3), $N_\\tau='+str(Nt)+'$')
+plt.axvline(beta0,linestyle='dashed',color='black')
 plt.tight_layout() # this repositions things to make the plot look nicer
 plt.savefig('RW_figures/Nt'+str(Nt)+'.pdf')
 plt.show() 
