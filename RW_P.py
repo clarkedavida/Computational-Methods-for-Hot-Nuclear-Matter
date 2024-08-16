@@ -18,7 +18,7 @@ else:
 logger.info('Nt=',Nt)
 
 
-NBINS = 64
+NBINS = 20
 AXIS  = 1
 NRW   = 301
 
@@ -52,9 +52,9 @@ deltaRW = {
   10 : 0.0003,
   12 : 0.001,
   14 : 0.0003,
-  16 : 0.0002,
+  16 : 0.0003,
   18 : 0.0002,
-  20 : 0.0002
+  20 : 0.0003
 }
 
 # This is the starting point around which we reweight.
