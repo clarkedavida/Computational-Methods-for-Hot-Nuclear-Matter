@@ -13,7 +13,9 @@ from latqcdtools.base.printErrorBars import get_err_str
 from latqcdtools.base.plotting import clearPlot, set_params, plot_lines, plt, plot_dots
 from latqcdtools.base.utilities import toNumpy
 from latqcdtools.base.check import ignoreUnderflow
+from latqcdtools.base.initialize import initialize
 
+initialize()
 ignoreUnderflow()
 ignoreBetaRange()
 
@@ -113,7 +115,7 @@ def getContinuumEstimate(filename,Ncut_mid,Ncut_max):
     
     set_params(xlabel='$(1/N_\\tau)^2$',ylabel='$T_c r_0$',title=filename,xmax=0.03)
     plt.vlines(0, Tdr0-Tdr0e, Tdr0+Tdr0e, color='red') 
-    plt.savefig(filename+'.pdf')
+    plt.savefig('otherFigures/'+filename+'.pdf')
     plt.show()
     clearPlot()
 
