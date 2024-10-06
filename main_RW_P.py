@@ -5,8 +5,10 @@ from latqcdtools.base.readWrite import readTable
 from latqcdtools.physics.statisticalPhysics import reweight
 import latqcdtools.base.logger as logger
 from latqcdtools.statistics.jackknife import jackknife
-from latqcdtools.base.plotting import set_params,plt,plot_dots,set_default_param
+from latqcdtools.base.plotting import set_params,plt,plot_dots,set_default_param,\
+    BACKGROUND,plot_vspan
 from latqcdtools.base.printErrorBars import get_err_str
+from latqcdtools.base.utilities import find_nearest_idx
 
 Nt=int(sys.argv[1])
 
@@ -61,7 +63,8 @@ deltaRW = {
 beta0 = oldBeta[Nt]  
 
 # INPUT: We need a table of Polyakov loop measurements and corresponding average plaquette
-#        on every configuration for a given beta value.
+#        on every configuration for a given beta value. You should be able to replace this
+#        path with the corresponding table for whatever configuration you want to analyze.
 PL0, act0 = readTable('Nt'+str(Nt)+'/Nt'+str(Nt)+'_Ns'+str(Ns)+'b'+oldBetac[Nt]+'.txt')
 
 V = 6*Ns**3*Nt # number of plaquettes (b/c we printed average plaquette) 
@@ -168,16 +171,24 @@ def findBetaMax(PL0S) -> float:
     return betamax
 
 
+# Find critical beta and corresponding error in susceptibility
 _, bmaxerr = jackknife( findBetaMax, [PL0,S], numb_blocks=NBINS, conf_axis=AXIS) 
 logger.info('beta_c(JACK) =',get_err_str(bmax,bmaxerr))
 maxsusc,maxsuscerr = jackknife( RWSUSC, [PL0, S], args=(bmax,beta0), numb_blocks=NBINS,conf_axis=AXIS )
 logger.info('chi_max =',get_err_str(maxsusc,maxsuscerr))
 
+# Read in literature results
+litNt, litbetac, litbetaerr = readTable('literature.d')
+iNt = find_nearest_idx(litNt,Nt)
+
+# Plotting...
 set_default_param(font_size=8)
-plot_dots(RWBetas,SUSCRW,SUSCRW_err,color='blue',marker=None)
-plot_dots([bmax],[maxsusc],[maxsuscerr],xedata=[bmaxerr],color='red',marker=None)
+plot_dots(RWBetas,SUSCRW,SUSCRW_err,color='green',marker=None,alpha=0.2,ZOD=BACKGROUND+1) # RW points
+plot_dots([bmax],[maxsusc],[maxsuscerr],xedata=[bmaxerr],color='red',marker=None,
+    label='$\\beta_c(N_\\tau)$') # Estimate for max
+plot_vspan(minVal=litbetac[iNt]-litbetaerr[iNt], maxVal=litbetac[iNt]+litbetaerr[iNt],color='yellow',
+    alpha=0.3, ZOD=BACKGROUND, label='literature') # literature
 set_params(xlabel='$\\beta$',ylabel='$\\chi_{|P|}$',title='RW Pure SU(3), $N_\\tau='+str(Nt)+'$')
-plt.axvline(beta0,linestyle='dashed',color='black')
 plt.tight_layout() # this repositions things to make the plot look nicer
 plt.savefig('RW_figures/Nt'+str(Nt)+'.pdf')
 plt.show() 
