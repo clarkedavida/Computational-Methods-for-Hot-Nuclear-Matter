@@ -18,32 +18,52 @@ import latqcdtools.base.logger as logger
 from latqcdtools.statistics.statistics import dev_by_dist
 
 # make a list of the Ntau i want to look at
-Nts = [6,8,10,12,14,16,18,20]
+Nt  = 12
+Nss = [18, 24, 36, 48, 60, 72, 84]
 
-# there are two possible spline strategies. if you set Nknots=None, it will do a standard
-# natural cubic spline. this is of course a solve to the data points, and will overfit to
-# the extent that the spline will pass through every datum by definition. if you set
-# Nknots to anything else, it will do what i call a 'natural-like' spline. my idea here was
-# the following: i would like to do a spline fit that cares about error bars, but i would also
-# like to impose zero curvature at the endpoints. this is achieved by creating a fake datum
-# before the left-most point that is colinear with the left-most point and the second
-# left-most point. the same is done on the right side. this strategy will favor zero
-# curvature while still taking the error bars into account when fitting, which prevents
-# any overfitting.
-Nknots = 3
+NknotsDict = {
+18: 2,#3,
+24: 2,#3,
+36: 2,#3,
+48: 2,#None, #3,
+60: 2,#None, #3,
+72: 2,#None, #3,
+84: 2,#None, #3,
+}
 #Nknots = None 
+
+xminDict = {
+18: 2,
+24: 2,
+36: 2,
+48: 2,
+60: 2,#2,
+72: 2,#2,
+84: 2,#2,
+}
+
+xmaxDict = {
+18: 1,
+24: 1,
+36: 1,
+48: 1,
+60: 1,
+72: 1,
+84: 1,
+}
 
 # this is where we're going to save our results for Tc and its error
 Tcs, Tces, Bcs, Bces = [], [], [], []
 
-Ntcolors=getColorGradient(len(Nts))
+Ntcolors=getColorGradient(len(Nss),map='winter')
 
 icolor = 0
-for Nt in Nts:
+for Ns in Nss:
 
-    # latticeParams is an object that expects an Ns when it gets instantiated.
-    # but actually it doesn't matter.
-    Ns = Nt*3
+    Nknots = NknotsDict[Ns]
+    xmin   = xminDict[Ns]
+    xmax   = xmaxDict[Ns]
+
 
     # INPUT: Here we need these tables that have beta, polyakov loop and error,
     #        susceptibility and error, Nconf, etc. We only use the polyakov loop
@@ -51,7 +71,10 @@ for Nt in Nts:
     data=readTable(f'Nt{Nt}/Nt{Nt}_Ns{Ns}.txt')
 
     # translate from the "data" array to beta, polyakov loop mean, and its error
-    beta, P, Pe = data[0][1:-1], data[1][1:-1], data[2][1:-1]
+    if xmax is None:
+        beta, P, Pe = data[0][xmin:]     , data[1][xmin:]     , data[2][xmin:]
+    else:
+        beta, P, Pe = data[0][xmin:-xmax], data[1][xmin:-xmax], data[2][xmin:-xmax]
 
 
     # Convert beta to T using the same parameterization as in the literature.
@@ -110,7 +133,7 @@ for Nt in Nts:
     else:
         Pspl = getSpline(xdata=T,ydata=P,edata=Pe,num_knots=Nknots,natural=True)
     Tspl = np.linspace(T[0],T[-1],1001)
-    plot_lines(Tspl,Pspl(Tspl),marker=None,color=Ntcolors[icolor],label='$N_\\tau='+str(Nt)+'$')
+    plot_lines(Tspl,Pspl(Tspl),marker=None,color=Ntcolors[icolor],label='$N_s='+str(Ns)+'$')
     plot_dots(T,P,Pe,color=Ntcolors[icolor])
     plt.axvspan(Tc-Tce,Tc+Tce,color=Ntcolors[icolor],alpha=0.3)
     Tcs.append(Tc)
@@ -118,14 +141,11 @@ for Nt in Nts:
     Bcs.append(Bc)
     Bces.append(Bce)
 
-    logger.info(Nt,f": beta_c ={get_err_str(Bc,Bce)}  T_c = {get_err_str(Tc,Tce)}")
+    logger.info(Ns,f": beta_c ={get_err_str(Bc,Bce)}  T_c = {get_err_str(Tc,Tce)}")
     icolor += 1
 
-# Write out to table so we can do continuum-limit extrapolations
-writeTable('cont_extrap.d',Nts,Tcs,Tces,header=['Nt','Tc [MeV]','err_Tc [Mev]'])
-writeTable('cont_extrap_beta.d',Nts,Bcs,Bces,header=['Nt','betac','err_beta'])
 
 # Finish the plot    
 set_params(xlabel='$T$ [MeV]',legendpos=6,ylabel='$\\langle|P|\\rangle$')
-plt.savefig('otherFigures/splineTcs.pdf')
+plt.savefig('otherFigures/splineTcs_varyNs.pdf')
 plt.show()  

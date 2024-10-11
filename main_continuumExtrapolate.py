@@ -10,11 +10,12 @@ from latqcdtools.physics.constants import r0_phys
 from latqcdtools.physics.lattice_params import latticeParams
 from latqcdtools.physics.referenceScales import r0_div_a, ignoreBetaRange
 from latqcdtools.base.printErrorBars import get_err_str
-from latqcdtools.base.plotting import clearPlot, set_params, plot_lines, plt, plot_dots
+from latqcdtools.base.plotting import clearPlot, set_params, plot_lines, plt, plot_dots, latexify
 from latqcdtools.base.utilities import toNumpy
 from latqcdtools.base.check import ignoreUnderflow
 from latqcdtools.base.initialize import initialize
 
+#latexify()
 initialize()
 ignoreUnderflow()
 ignoreBetaRange()
@@ -26,6 +27,9 @@ def extrapolate(filename,order=2,Ncut=0,show_results=False,plot_results=False):
     Nts       = data[0][Ncut:] 
     betacs    = data[1][Ncut:]
     betacerrs = data[2][Ncut:]
+    
+    if filename!='literature.d':
+        betacerrs *= 10
     
     Tds, Tderrs = [], []
     r0 = r0_phys(year=2014, units="MeVinv")
@@ -112,8 +116,17 @@ def getContinuumEstimate(filename,Ncut_mid,Ncut_max):
 
     for i in range(len(params)):
         plot_lines(xplot,_powerSeries(xplot,params[i]),color='blue',marker=None,alpha=PrMD[i])
-    
-    set_params(xlabel='$(1/N_\\tau)^2$',ylabel='$T_c r_0$',title=filename,xmax=0.03)
+
+    if filename=='literature.d':
+        title='Francis et al. BMA'
+    elif filename=='RWbetas.txt':
+        title='Reweighting BMA'
+    elif filename=='cont_extrap_beta.d':
+        title='Spline BMA'
+    else:
+        logger.TBError('No title rule for file',filename)
+
+    set_params(xlabel='$(1/N_\\tau)^2$',ylabel='$r_0 T_d$',title=title,xmax=0.03)
     plt.vlines(0, Tdr0-Tdr0e, Tdr0+Tdr0e, color='red') 
     plt.savefig('otherFigures/'+filename+'.pdf')
     plt.show()
